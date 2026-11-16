@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anclajes y Pernos SAC — Catálogo técnico de pernería y anclajes</title>
+<meta name="description" content="Pernos, tuercas, arandelas, varillas roscadas y pernos de anclaje con ficha técnica, calidades y cuadros de medida. Comas, Lima. Despacho a todo el Perú.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..900;1,62..125,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --noche:#04122B; --noche-2:#071C40; --noche-3:#0A2550;
+  --linea:rgba(140,180,240,.16); --linea-2:rgba(140,180,240,.28);
+  --azul:#2B86E6; --azul-hondo:#0B3A8A; --cian:#86C8FF;
+  --blanco:#F3F7FC; --acero:#C3CFDD; --muted:#8EA3C0;
+  --stage-1:#F7FAFD; --stage-2:#D9E2EC;
+  --f36:#2B86E6; --f55:#F0C030; --f105:#E0443A;
+  --maxw:1280px;
+  --ease:cubic-bezier(.2,.75,.15,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px;background:var(--noche)}
+body{margin:0;background:var(--noche);color:var(--acero);font-family:'Archivo',system-ui,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;font-feature-settings:'tnum' 1;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,h4,p{margin:0}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+:focus-visible{outline:3px solid var(--cian);outline-offset:3px}
+::selection{background:var(--azul);color:#fff}
+
+/* textura de plano + grano para todo el sitio */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:linear-gradient(var(--linea) 1px,transparent 1px),linear-gradient(90deg,var(--linea) 1px,transparent 1px),linear-gradient(rgba(140,180,240,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(140,180,240,.06) 1px,transparent 1px);
+  background-size:120px 120px,120px 120px,24px 24px,24px 24px;opacity:.55;mask-image:radial-gradient(ellipse 120% 90% at 50% 0%,#000 30%,transparent 85%)}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+main,header,footer{position:relative;z-index:1}
+
+/* tipografía */
+.display{font-variation-settings:'wdth' 122;font-weight:850;letter-spacing:-.03em;line-height:.92;color:var(--blanco)}
+.h2{font-variation-settings:'wdth' 116;font-weight:820;font-size:clamp(34px,4.6vw,66px);letter-spacing:-.028em;line-height:.98;color:var(--blanco)}
+.h3{font-variation-settings:'wdth' 108;font-weight:740;font-size:22px;letter-spacing:-.01em;line-height:1.15;color:var(--blanco)}
+.lede{font-size:19px;color:var(--muted);max-width:52ch}
+.outline{color:transparent;-webkit-text-stroke:1.5px rgba(200,225,255,.75)}
+
+/* botones */
+.btn{position:relative;display:inline-flex;align-items:center;gap:10px;font:inherit;font-weight:680;font-size:16px;padding:15px 26px;border-radius:6px;border:1px solid transparent;text-decoration:none;cursor:pointer;overflow:hidden;isolation:isolate;transition:transform .25s var(--ease),box-shadow .25s,background .2s,border-color .2s,color .2s}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-azul{background:linear-gradient(180deg,#3C95F0,#1E6FD0);color:#fff;box-shadow:0 10px 30px -8px rgba(43,134,230,.7),inset 0 1px 0 rgba(255,255,255,.35)}
+.btn-azul::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.45) 50%,transparent 70%);transform:translateX(-120%);transition:transform .7s var(--ease)}
+.btn-azul:hover{transform:translateY(-2px);box-shadow:0 16px 40px -10px rgba(43,134,230,.9),inset 0 1px 0 rgba(255,255,255,.35)}
+.btn-azul:hover::after{transform:translateX(120%)}
+.btn-vidrio{background:rgba(255,255,255,.05);border-color:var(--linea-2);color:var(--blanco);backdrop-filter:blur(8px)}
+.btn-vidrio:hover{background:rgba(255,255,255,.1);border-color:var(--cian);transform:translateY(-2px)}
+
+/* progreso de scroll */
+.progreso{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--azul),var(--cian));z-index:60}
+
+/* header */
+.site{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,border-color .3s,backdrop-filter .3s;border-bottom:1px solid transparent}
+.site.solido{background:rgba(4,18,43,.78);backdrop-filter:blur(14px) saturate(140%);border-color:var(--linea)}
+.site .wrap{display:flex;align-items:center;gap:32px;height:76px}
+.site .logo{display:flex;align-items:center;background:#fff;border-radius:6px;padding:6px 12px}
+.site .logo img{height:32px;width:auto}
+.site nav{display:flex;gap:30px;margin-left:auto}
+.site nav a{text-decoration:none;font-weight:580;font-size:15.5px;color:var(--acero);position:relative;padding:6px 0}
+.site nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--cian);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+.site nav a:hover{color:#fff}.site nav a:hover::after{transform:scaleX(1)}
+.site .btn{padding:11px 18px;font-size:15px}
+@media (max-width:960px){.site nav{display:none}.site .btn{margin-left:auto}}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:grid;align-items:center;overflow:hidden;padding:110px 0 120px}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(60% 55% at 72% 45%,rgba(43,134,230,.38),transparent 70%),
+  radial-gradient(40% 40% at 88% 80%,rgba(134,200,255,.14),transparent 70%),
+  radial-gradient(50% 60% at 10% 100%,rgba(11,58,138,.6),transparent 70%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:24px;align-items:center;width:100%}
+.hero-txt{position:relative;z-index:2}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:15px;font-weight:600;color:var(--cian);padding:7px 14px 7px 10px;border:1px solid var(--linea-2);border-radius:40px;background:rgba(43,134,230,.08)}
+.kicker i{width:8px;height:8px;border-radius:50%;background:var(--cian);box-shadow:0 0 0 0 rgba(134,200,255,.7);animation:pulso 2.2s infinite}
+@keyframes pulso{70%{box-shadow:0 0 0 10px rgba(134,200,255,0)}100%{box-shadow:0 0 0 0 rgba(134,200,255,0)}}
+.hero h1{font-size:clamp(44px,5.5vw,96px);margin-top:28px}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.04em}
+.hero h1 .ln>span{display:block;white-space:nowrap}
+.hero .lede{margin-top:30px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+.hero-3d{position:relative;height:min(78vh,720px);margin-right:-8vw}
+.hero-3d canvas{position:absolute;inset:0;width:100%!important;height:100%!important}
+.hero-3d .fallback{position:absolute;left:50%;top:50%;width:min(88%,520px);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle at 50% 42%,#fff,#E6EDF5 45%,#9FB3CC 72%,rgba(43,134,230,0) 73%);display:grid;place-items:center;opacity:0;transition:opacity .6s}
+.hero-3d .fallback img{width:72%;mix-blend-mode:multiply;animation:flota 6s ease-in-out infinite}
+.hero-3d.sin3d .fallback{opacity:1}
+.hud{position:absolute;pointer-events:none;font-size:13.5px;font-weight:620;color:var(--cian);display:flex;align-items:center;gap:10px;white-space:nowrap}
+.hud::before{content:"";width:46px;height:1px;background:var(--cian);transform-origin:left;transform:scaleX(var(--s,1));transition:transform .9s var(--ease)}
+.hud b{color:#fff;font-weight:700;font-variation-settings:'wdth' 110;font-size:16px}
+.hud.izq{flex-direction:row-reverse}
+.hud.izq::before{transform-origin:right}
+.hud1{top:18%;left:6%}.hud2{top:52%;right:16%}.hud3{bottom:14%;left:14%}
+.hero-pie{position:absolute;left:0;right:0;bottom:0;border-top:1px solid var(--linea);background:linear-gradient(180deg,rgba(4,18,43,0),rgba(4,18,43,.7))}
+.hero-pie .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.dato{padding:20px 0;border-right:1px solid var(--linea);padding-left:24px}
+.dato:first-child{padding-left:0}.dato:last-child{border-right:0}
+.dato b{display:block;font-variation-settings:'wdth' 118;font-weight:820;font-size:30px;color:#fff;letter-spacing:-.02em;line-height:1.05}
+.dato span{font-size:14.5px;color:var(--muted)}
+.scroll-hint{position:absolute;left:50%;bottom:104px;transform:translateX(-50%);width:26px;height:42px;border:1.5px solid var(--linea-2);border-radius:14px}
+.scroll-hint::after{content:"";position:absolute;left:50%;top:8px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:var(--cian);animation:rueda 1.8s infinite}
+@keyframes rueda{0%{opacity:0;transform:translateY(0)}30%{opacity:1}100%{opacity:0;transform:translateY(14px)}}
+@media (max-width:960px){
+  .hero{padding:96px 0 0;min-height:0}
+  .hero .wrap{grid-template-columns:1fr}
+  .hero-3d{height:380px;margin:0 -32px}
+  .hud{display:none}
+  .hero-pie{position:relative}
+  .hero-pie .wrap{grid-template-columns:1fr 1fr}
+  .dato{padding:16px 0 16px 16px;border-bottom:1px solid var(--linea)}
+  .dato:nth-child(odd){padding-left:0}.dato:nth-child(2){border-right:0}
+  .dato b{font-size:24px}
+  .scroll-hint{display:none}
+}
+
+/* entrada del hero */
+@media (prefers-reduced-motion:no-preference){
+  .hero h1 .ln>span{transform:translateY(105%);animation:sube 1s var(--ease) forwards}
+  .hero h1 .ln:nth-child(2)>span{animation-delay:.1s}
+  .hero h1 .ln:nth-child(3)>span{animation-delay:.2s}
+  @keyframes sube{to{transform:none}}
+  .hero .kicker,.hero .lede,.hero .ctas{opacity:0;transform:translateY(18px);animation:aparece .9s var(--ease) forwards}
+  .hero .lede{animation-delay:.45s}.hero .ctas{animation-delay:.6s}
+  @keyframes aparece{to{opacity:1;transform:none}}
+  .hud{opacity:0;--s:0;animation:hud .8s var(--ease) forwards}
+  .hud1{animation-delay:1.1s}.hud2{animation-delay:1.3s}.hud3{animation-delay:1.5s}
+  @keyframes hud{to{opacity:1;--s:1}}
+}
+@property --s{syntax:'<number>';inherits:true;initial-value:1}
+
+/* marquesina de normas */
+.normas{position:relative;border-block:1px solid var(--linea);background:var(--noche-2);overflow:hidden;padding:20px 0}
+.normas .pista{display:flex;width:max-content;gap:56px;animation:desliza 38s linear infinite}
+.normas:hover .pista{animation-play-state:paused}
+.normas span{display:flex;align-items:center;gap:56px;font-variation-settings:'wdth' 120;font-weight:800;font-size:28px;letter-spacing:-.01em;color:rgba(200,225,255,.28);white-space:nowrap}
+.normas span:nth-child(3n+1){color:var(--blanco)}
+.normas svg{width:18px;height:18px;flex:none;color:var(--azul)}
+@keyframes desliza{to{transform:translateX(-50%)}}
+
+/* secciones */
+section{position:relative;scroll-margin-top:76px}
+.sec{padding:130px 0}
+.sec-head{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:24px 64px;align-items:end;margin-bottom:56px}
+.sec-head p{color:var(--muted);max-width:46ch;font-size:18px}
+.num-sec{display:block;font-size:15px;font-weight:650;color:var(--cian);margin-bottom:18px}
+@media (max-width:960px){.sec{padding:84px 0}.sec-head{grid-template-columns:1fr;margin-bottom:36px}}
+
+/* revelado al scroll */
+@media (prefers-reduced-motion:no-preference){
+  .rv{opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease),transform 1s var(--ease);transition-delay:calc(var(--i,0)*90ms)}
+  .rv.ok{opacity:1;transform:none}
+}
+
+/* ---------- LÍNEAS (familias) ---------- */
+.lineas{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;perspective:1200px}
+.linea{position:relative;display:flex;flex-direction:column;text-align:left;font:inherit;color:inherit;cursor:pointer;border:1px solid var(--linea);border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.015));padding:18px 18px 20px;min-height:330px;overflow:hidden;transform-style:preserve-3d;transition:transform .5s var(--ease),border-color .3s,box-shadow .4s}
+.linea:hover{border-color:var(--linea-2);box-shadow:0 30px 60px -20px rgba(0,0,0,.6),0 0 0 1px rgba(134,200,255,.15)}
+.linea .foco{position:relative;height:170px;border-radius:10px;background:radial-gradient(circle at 50% 42%,var(--stage-1),var(--stage-2) 75%);display:grid;place-items:center;overflow:hidden}
+.linea .foco img{max-height:130px;max-width:82%;object-fit:contain;mix-blend-mode:multiply;transition:transform .6s var(--ease)}
+.linea:hover .foco img{transform:scale(1.08) rotate(-4deg)}
+.linea .cuenta{position:absolute;top:28px;right:28px;font-size:13px;font-weight:700;color:var(--azul-hondo);background:rgba(255,255,255,.75);padding:3px 9px;border-radius:20px;z-index:1}
+.linea h3{margin-top:20px;font-size:25px;font-variation-settings:'wdth' 118;font-weight:820}
+.linea p{font-size:14.5px;color:var(--muted);margin-top:6px;line-height:1.45}
+.linea .ir{margin-top:auto;padding-top:16px;font-size:14.5px;font-weight:650;color:var(--cian);display:flex;align-items:center;gap:8px}
+.linea .ir svg{width:16px;height:16px;transition:transform .3s var(--ease)}
+.linea:hover .ir svg{transform:translateX(4px)}
+.linea .brillo{position:absolute;inset:0;pointer-events:none;background:radial-gradient(400px circle at var(--mx,50%) var(--my,0%),rgba(134,200,255,.14),transparent 45%);opacity:0;transition:opacity .3s}
+.linea:hover .brillo{opacity:1}
+@media (max-width:1100px){.lineas{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:640px){.lineas{grid-template-columns:1fr 1fr}.linea{min-height:0}.linea .foco{height:120px}.linea .foco img{max-height:90px}.linea h3{font-size:20px}.linea p{display:none}}
+
+/* ---------- CATÁLOGO ---------- */
+.sec-cat{background:linear-gradient(180deg,transparent,rgba(7,28,64,.85) 12%,rgba(7,28,64,.85) 88%,transparent)}
+.familias{display:inline-flex;gap:4px;padding:5px;border:1px solid var(--linea);border-radius:12px;background:rgba(255,255,255,.04);margin-bottom:26px;max-width:100%;overflow-x:auto;position:relative}
+.familias button{position:relative;z-index:1;font:inherit;font-weight:650;font-size:16px;padding:11px 20px;background:transparent;border:0;border-radius:8px;color:var(--acero);cursor:pointer;white-space:nowrap;transition:color .25s}
+.familias button small{font-weight:500;opacity:.6;margin-left:6px}
+.familias button[aria-selected="true"]{color:#fff}
+.familias .pill{position:absolute;z-index:0;top:5px;bottom:5px;border-radius:8px;background:linear-gradient(180deg,#3C95F0,#1E6FD0);box-shadow:0 8px 24px -6px rgba(43,134,230,.7);transition:left .45s var(--ease),width .45s var(--ease)}
+
+.visor{display:grid;grid-template-columns:290px minmax(0,1fr);gap:24px;align-items:start}
+.lista{position:sticky;top:100px;display:flex;flex-direction:column;gap:6px}
+.lista button{display:flex;align-items:center;gap:14px;text-align:left;font:inherit;font-size:16px;font-weight:600;line-height:1.25;padding:10px 12px;border:1px solid transparent;border-radius:10px;background:transparent;color:var(--acero);cursor:pointer;transition:background .2s,border-color .2s,transform .25s var(--ease)}
+.lista button .th{width:56px;height:44px;flex:none;border-radius:7px;background:radial-gradient(circle,var(--stage-1),var(--stage-2));display:grid;place-items:center;overflow:hidden}
+.lista button .th img{max-width:86%;max-height:86%;object-fit:contain;mix-blend-mode:multiply}
+.lista button small{display:block;font-weight:480;font-size:13.5px;color:var(--muted);margin-top:2px}
+.lista button:hover{background:rgba(255,255,255,.05);transform:translateX(3px)}
+.lista button[aria-current="true"]{background:rgba(43,134,230,.14);border-color:rgba(134,200,255,.35);color:#fff}
+
+.ficha{border:1px solid var(--linea);border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.02));overflow:hidden;box-shadow:0 40px 80px -40px rgba(0,0,0,.8)}
+.ficha.cambia .anim{animation:entra .6s var(--ease) both}
+.ficha.cambia .anim:nth-child(2){animation-delay:.06s}
+@keyframes entra{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.ficha-top{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}
+.imgbox{position:relative;margin:14px;border-radius:12px;background:radial-gradient(circle at 50% 38%,#fff,var(--stage-1) 30%,var(--stage-2) 85%);min-height:400px;display:flex;flex-direction:column;overflow:hidden}
+.imgbox::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(11,58,138,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(11,58,138,.07) 1px,transparent 1px);background-size:22px 22px;mask-image:radial-gradient(circle at 50% 50%,transparent 30%,#000 90%)}
+.imgbox .stage{position:relative;flex:1;display:grid;place-items:center;padding:34px}
+.imgbox .stage img{max-height:320px;width:auto;max-width:100%;object-fit:contain;mix-blend-mode:multiply;transition:opacity .25s,transform .45s var(--ease);animation:flota 6s ease-in-out infinite}
+.imgbox .stage img.plano{animation:none}
+.imgbox .stage img.cargando{opacity:0;transform:scale(.96)}
+@keyframes flota{50%{transform:translateY(-8px)}}
+.imgbox .sombra{position:absolute;left:25%;right:25%;bottom:64px;height:18px;border-radius:50%;background:radial-gradient(rgba(4,18,43,.28),transparent 70%);filter:blur(4px)}
+.vista{position:relative;display:flex;gap:6px;padding:12px}
+.vista button{font:inherit;font-size:14.5px;font-weight:650;padding:8px 14px;border-radius:7px;border:1px solid rgba(11,58,138,.18);background:rgba(255,255,255,.7);color:#33475f;cursor:pointer}
+.vista button[aria-pressed="true"]{background:var(--noche);border-color:var(--noche);color:#fff}
+.vista button:disabled{opacity:.35;cursor:not-allowed}
+.ficha-info{padding:34px 34px 30px 20px}
+.ficha-info .fam{font-size:14.5px;color:var(--cian);font-weight:650}
+.ficha-info h3{font-variation-settings:'wdth' 118;font-weight:850;font-size:clamp(30px,3.3vw,46px);letter-spacing:-.025em;line-height:.98;margin-top:8px;color:#fff}
+.ficha-info .res{margin-top:16px;color:var(--muted);max-width:46ch}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:20px}
+.chips span{font-size:14px;font-weight:700;padding:5px 11px;border-radius:6px;background:rgba(43,134,230,.16);border:1px solid rgba(134,200,255,.3);color:var(--cian)}
+dl.specs{margin:24px 0 0;display:grid;grid-template-columns:auto 1fr}
+dl.specs dt,dl.specs dd{padding:10px 0;border-top:1px solid var(--linea);font-size:15.5px}
+dl.specs dt{color:var(--muted);padding-right:22px;white-space:nowrap}
+dl.specs dd{margin:0;font-weight:560;color:var(--blanco)}
+
+.bloque{padding:30px 34px;border-top:1px solid var(--linea)}
+.bloque-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px 24px;margin-bottom:18px}
+.bloque-head .h3 small{font-variation-settings:'wdth' 100;font-weight:480;font-size:15px;color:var(--muted);margin-left:10px;letter-spacing:0}
+.medida-sel{display:flex;align-items:center;gap:10px;font-size:15px;color:var(--muted)}
+.medida-sel select{font:inherit;font-weight:650;color:#fff;padding:8px 36px 8px 13px;border:1px solid var(--linea-2);border-radius:7px;background:rgba(255,255,255,.06) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%2386C8FF' stroke-width='1.8'/%3E%3C/svg%3E") no-repeat right 12px center;appearance:none}
+.medida-sel select option{color:#000}
+.tabla-scroll{overflow-x:auto;border:1px solid var(--linea);border-radius:10px;background:rgba(4,18,43,.5)}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{padding:10px 14px;text-align:right;white-space:nowrap;border-bottom:1px solid rgba(140,180,240,.09);transition:background .15s,color .15s}
+thead th{font-weight:650;font-size:13.5px;line-height:1.25;color:var(--muted);background:rgba(10,37,80,.9);vertical-align:bottom;white-space:normal;min-width:84px}
+th:first-child,td:first-child{text-align:left;position:sticky;left:0;z-index:1}
+thead th:first-child{z-index:2}
+tbody th{font-size:15px;color:#fff;background:#0A2148;font-weight:750;white-space:nowrap}
+td{color:var(--acero)}
+tbody tr:last-child td,tbody tr:last-child th{border-bottom:0}
+.t-medidas tbody tr{cursor:pointer}
+.t-medidas td.cx{background:rgba(43,134,230,.1)}
+.t-medidas tr.cx td{background:rgba(43,134,230,.1)}
+.t-medidas tr.cx th{background:#0F2D5E}
+.t-medidas tr.cx td.cx{background:rgba(43,134,230,.28);color:#fff}
+.t-medidas thead th.cx{color:#fff;box-shadow:inset 0 -2px 0 var(--cian)}
+.t-medidas tr.sel td,.t-medidas tr.sel th{background:linear-gradient(180deg,#3C95F0,#1E6FD0)!important;color:#fff}
+.t-calidad td{white-space:normal;text-align:left}
+.t-calidad thead th{text-align:left}
+.nota{background:rgba(43,134,230,.1);border:1px solid rgba(134,200,255,.25);border-radius:10px;padding:18px 22px;color:var(--blanco);max-width:72ch}
+.cotizar{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;padding:24px 34px;border-top:1px solid var(--linea);background:rgba(43,134,230,.08)}
+.cotizar p{color:var(--muted);font-size:15px;flex:1;min-width:220px}
+.cotizar p b{color:#fff}
+@media (max-width:1060px){
+  .visor{grid-template-columns:1fr}
+  .lista{position:static;flex-direction:row;overflow-x:auto;gap:8px;padding-bottom:6px}
+  .lista button{flex:none;background:rgba(255,255,255,.04);border-color:var(--linea)}
+  .lista button small{display:none}
+}
+@media (max-width:760px){
+  .ficha-top{grid-template-columns:1fr}
+  .imgbox{min-height:280px}
+  .imgbox .stage img{max-height:220px}
+  .ficha-info{padding:10px 20px 24px}
+  .bloque{padding:24px 20px}.cotizar{padding:20px}
+  .t-calidad td,.t-calidad th{min-width:128px}
+}
+
+/* ---------- CALIDADES ---------- */
+.marcas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.marca{position:relative;border:1px solid var(--linea);border-radius:14px;padding:26px 24px 24px;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.01));overflow:hidden;transition:border-color .3s,transform .4s var(--ease)}
+.marca:hover{border-color:rgba(134,200,255,.4);transform:translateY(-4px)}
+.marca svg{width:120px;height:120px;display:block;overflow:visible}
+.marca svg .trazo{stroke-dasharray:var(--len,400);stroke-dashoffset:var(--len,400);transition:stroke-dashoffset 1.6s var(--ease)}
+.marca svg .marca-i{opacity:0;transition:opacity .6s .9s}
+.marca.ok svg .trazo{stroke-dashoffset:0}
+.marca.ok svg .marca-i{opacity:1}
+.marca h3{font-variation-settings:'wdth' 114;font-weight:800;font-size:22px;margin-top:18px;color:#fff}
+.marca p{font-size:15px;color:var(--muted);margin-top:6px;line-height:1.45}
+.marca .dato-m{display:block;color:var(--cian);font-weight:680;margin-top:12px;font-size:15px}
+@media (prefers-reduced-motion:reduce){.marca svg .trazo{stroke-dashoffset:0}.marca svg .marca-i{opacity:1}}
+@media (max-width:960px){.marcas{grid-template-columns:repeat(2,minmax(0,1fr))}.marca svg{width:88px;height:88px}.marca{padding:20px 16px}}
+.f1554{margin-top:90px;display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:40px 72px;align-items:center;border:1px solid var(--linea);border-radius:18px;padding:48px;background:radial-gradient(80% 120% at 100% 50%,rgba(43,134,230,.16),transparent 60%),rgba(255,255,255,.02)}
+.f1554 p{color:var(--muted);max-width:44ch;margin-top:16px}
+.varillas-f{display:flex;flex-direction:column;gap:26px}
+.vf{display:grid;grid-template-columns:minmax(0,1fr) 170px;gap:22px;align-items:center}
+.vf svg{width:100%;height:40px;overflow:visible}
+.vf .barra{transform:translateX(-30px);opacity:0;transition:transform 1.1s var(--ease),opacity .8s;transition-delay:calc(var(--i,0)*150ms)}
+.f1554.ok .vf .barra{transform:none;opacity:1}
+.vf b{font-variation-settings:'wdth' 116;font-size:24px;font-weight:820;color:#fff;display:block;line-height:1.1}
+.vf span{font-size:14px;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){.vf .barra{transform:none;opacity:1}}
+@media (max-width:960px){.f1554{grid-template-columns:1fr;padding:28px 22px}.vf{grid-template-columns:minmax(0,1fr) 128px}.vf b{font-size:20px}}
+
+/* ---------- ACABADOS ---------- */
+.acabados{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.acabado{border:1px solid var(--linea);border-radius:14px;overflow:hidden;background:rgba(255,255,255,.02)}
+.acabado .sw{height:190px;position:relative;overflow:hidden}
+.acabado .sw::after{content:"";position:absolute;inset:-20%;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.55) 48%,rgba(255,255,255,.1) 52%,transparent 62%);transform:translateX(-80%);transition:transform 1.1s var(--ease)}
+.acabado:hover .sw::after{transform:translateX(80%)}
+.acabado .tx{padding:20px 22px 24px}
+.acabado h3{font-size:21px}
+.acabado p{color:var(--muted);font-size:15.5px;margin-top:8px}
+.sw-negro{background:radial-gradient(120% 90% at 30% 15%,#5a6068 0%,#22272d 45%,#0b0d10 100%)}
+.sw-zinc{background:linear-gradient(115deg,#bfcbd8 0%,#eef3f8 18%,#b3c4d8 34%,#e9def3 48%,#bed3e6 64%,#f1f5fa 80%,#c4d0dc 100%)}
+.sw-galv{background:#a7b0b8}
+.sw-galv svg{position:absolute;inset:0;width:100%;height:100%}
+.sw-inox{background:repeating-linear-gradient(90deg,#e1e5e9 0 2px,#cfd5da 2px 3px,#e9ecef 3px 5px),#d7dbdf}
+@media (max-width:960px){.acabados{grid-template-columns:repeat(2,minmax(0,1fr))}.acabado .sw{height:130px}}
+
+/* ---------- FABRICACIÓN ---------- */
+.banda{position:relative;height:min(80vh,720px);overflow:hidden;display:grid;align-items:end}
+.banda img{position:absolute;inset:-12% 0;width:100%;height:124%;object-fit:cover;will-change:transform}
+.banda::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--noche) 0%,rgba(4,18,43,.35) 30%,rgba(4,18,43,.5) 60%,var(--noche) 100%),linear-gradient(90deg,rgba(4,18,43,.85),transparent 65%)}
+.banda .wrap{position:relative;z-index:1;padding-bottom:90px;width:100%}
+.banda h2{max-width:13ch;font-size:clamp(40px,6.4vw,96px)}
+.banda p{margin-top:22px;max-width:48ch;color:var(--acero);font-size:19px}
+.capac{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:-40px;position:relative;z-index:2}
+.capac div{border:1px solid var(--linea);border-radius:14px;padding:26px 24px;background:rgba(7,28,64,.82);backdrop-filter:blur(10px)}
+.capac svg{width:34px;height:34px;color:var(--cian)}
+.capac h3{font-size:20px;margin-top:16px}
+.capac p{color:var(--muted);font-size:15.5px;margin-top:6px}
+.fotos-fab{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.fotos-fab figure{margin:0;position:relative;border-radius:14px;overflow:hidden;height:340px;border:1px solid var(--linea)}
+.fotos-fab img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.fotos-fab figure:hover img{transform:scale(1.05)}
+.fotos-fab figcaption{position:absolute;left:14px;bottom:14px;background:rgba(4,18,43,.82);backdrop-filter:blur(6px);color:#fff;font-size:14px;font-weight:600;padding:8px 13px;border-radius:7px}
+.pasos{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin:100px 0 0;padding:0;list-style:none;counter-reset:paso}
+.pasos::before{content:"";position:absolute;left:0;right:0;top:34px;height:2px;background:var(--linea)}
+.pasos::after{content:"";position:absolute;left:0;right:0;top:34px;height:2px;background:linear-gradient(90deg,var(--azul),var(--cian));transform-origin:left;transform:scaleX(var(--p,0));transition:transform .2s linear}
+.pasos li{position:relative;padding-top:0}
+.pasos li::before{counter-increment:paso;content:counter(paso);position:relative;z-index:1;display:grid;place-items:center;width:70px;height:70px;border-radius:50%;background:var(--noche);border:2px solid var(--linea-2);font-variation-settings:'wdth' 120;font-weight:850;font-size:30px;color:#fff;margin-bottom:22px;transition:border-color .4s,box-shadow .4s,background .4s}
+.pasos li.on::before{border-color:var(--cian);background:var(--azul-hondo);box-shadow:0 0 0 6px rgba(43,134,230,.18),0 0 30px rgba(43,134,230,.5)}
+.pasos h3{font-size:20px}
+.pasos p{color:var(--muted);font-size:15.5px;margin-top:6px}
+@media (max-width:960px){.capac{grid-template-columns:1fr;margin-top:-20px}.fotos-fab{grid-template-columns:1fr}.fotos-fab figure{height:240px}.pasos{grid-template-columns:1fr 1fr;gap:36px 20px}.pasos::before,.pasos::after{display:none}.banda .wrap{padding-bottom:60px}}
+
+/* ---------- SECTORES ---------- */
+.sectores{display:flex;flex-wrap:wrap;gap:0;border-top:1px solid var(--linea)}
+.sectores span{flex:1 1 25%;font-variation-settings:'wdth' 116;font-size:clamp(22px,2.4vw,34px);font-weight:800;letter-spacing:-.02em;color:rgba(200,225,255,.35);padding:26px 0;border-bottom:1px solid var(--linea);transition:color .3s,padding .4s var(--ease)}
+.sectores span:hover{color:#fff;padding-left:14px}
+@media (max-width:760px){.sectores span{flex-basis:50%;padding:18px 0}}
+
+/* ---------- CONTACTO ---------- */
+.contacto-box{position:relative;border-radius:24px;overflow:hidden;padding:64px;background:radial-gradient(70% 90% at 100% 0%,rgba(134,200,255,.35),transparent 60%),radial-gradient(60% 80% at 0% 100%,rgba(11,58,138,.9),transparent 70%),linear-gradient(135deg,#1A62C4,#0B3A8A 60%,#072a66);box-shadow:0 50px 100px -40px rgba(0,0,0,.8)}
+.contacto-box::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:32px 32px;mask-image:linear-gradient(90deg,transparent,#000)}
+.contacto{position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:56px;align-items:start}
+.contacto .h2{font-size:clamp(36px,4.4vw,62px)}
+.contacto .sub{color:#D3E3F7;margin:18px 0 32px;max-width:46ch}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form label{display:flex;flex-direction:column;gap:7px;font-size:14.5px;font-weight:650;color:#D3E3F7}
+form .full{grid-column:1/-1}
+input,select,textarea{font:inherit;font-size:16px;color:#fff;padding:13px 14px;border:1px solid rgba(255,255,255,.28);border-radius:8px;background:rgba(4,18,43,.35);font-weight:450;backdrop-filter:blur(6px)}
+input::placeholder,textarea::placeholder{color:rgba(211,227,247,.55)}
+select option,select optgroup{color:#000}
+textarea{min-height:110px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:#fff;box-shadow:0 0 0 3px rgba(255,255,255,.2)}
+form .btn{justify-self:start;background:#fff;color:var(--azul-hondo);box-shadow:0 14px 34px -10px rgba(0,0,0,.5)}
+form .btn:hover{transform:translateY(-2px)}
+form .aviso{font-size:14px;color:#D3E3F7;align-self:center}
+.datos{display:grid;gap:12px}
+.datos div{border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:22px 24px;background:rgba(4,18,43,.25);backdrop-filter:blur(6px)}
+.datos dt{font-size:14.5px;color:#BCD3EE}
+.datos dd{margin:6px 0 0;font-size:21px;font-weight:700;font-variation-settings:'wdth' 110;color:#fff}
+.datos dd a{text-decoration:none;border-bottom:1.5px solid var(--cian)}
+.datos dd small{display:block;font-size:15px;font-weight:450;color:#BCD3EE;font-variation-settings:'wdth' 100;margin-top:2px}
+@media (max-width:960px){.contacto-box{padding:34px 22px;border-radius:18px}.contacto{grid-template-columns:1fr;gap:36px}form{grid-template-columns:1fr}}
+
+footer{padding:60px 0 50px;font-size:15px;color:var(--muted);border-top:1px solid var(--linea);margin-top:110px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:20px 48px;justify-content:space-between;align-items:center}
+footer .logo-f{background:#fff;border-radius:6px;padding:7px 12px}
+footer img{height:30px;width:auto}
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:55;width:60px;height:60px;border-radius:50%;background:#22A65A;color:#fff;display:grid;place-items:center;box-shadow:0 10px 30px -6px rgba(34,166,90,.7)}
+.wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #22A65A;animation:onda 2.4s infinite}
+@keyframes onda{to{transform:scale(1.6);opacity:0}}
+.wa-float svg{width:30px;height:30px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}.hero h1 .ln>span{transform:none}}
+</style>
+</head>
+<body>
+<div class="progreso" id="progreso"></div>
+
+<header class="site" id="site">
+  <div class="wrap">
+    <a class="logo" href="#inicio" aria-label="Anclajes y Pernos SAC, inicio"><img src="img/logo.webp" alt="Anclajes y Pernos SAC" width="640" height="188"></a>
+    <nav aria-label="Principal">
+      <a href="#lineas">Productos</a>
+      <a href="#catalogo">Catálogo técnico</a>
+      <a href="#calidades">Calidades</a>
+      <a href="#fabricacion">Fabricación</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn btn-azul" data-wa="Hola, quisiera cotizar pernería." href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.05c-.24.68-1.42 1.3-1.950 1.35-.5.05-1.13.07-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.8-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.27-.29.58-.36.78-.36h.56c.18 0 .42-.07.66.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.19-.14.31-.29.48-.14.17-.3.38-.43.5-.14.14-.29.3-.12.58.17.29.75 1.24 1.61 2 1.11.99 2.04 1.3 2.33 1.44.29.14.46.12.63-.07.17-.19.72-.84.91-1.130.19-.29.39-.24.65-.14.27.1 1.68.79 1.97.94.29.14.48.22.55.34.07.12.07.7-.17 1.38z"/></svg>
+ Cotizar</a>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero" aria-labelledby="h-hero">
+  <div class="wrap">
+    <div class="hero-txt">
+      <span class="kicker"><i></i>Pernería importada y anclajes a medida, Lima</span>
+      <h1 id="h-hero" class="display"><span class="ln"><span>El perno</span></span><span class="ln"><span class="outline">correcto,</span></span><span class="ln"><span>con su ficha.</span></span></h1>
+      <p class="lede">Importamos pernería de alta producción y fabricamos anclajes según tu plano. Revisa norma, calidad y cuadro de medidas de cada producto antes de cotizar.</p>
+      <div class="ctas">
+        <a class="btn btn-azul" href="#catalogo">Ver catálogo técnico</a>
+        <a class="btn btn-vidrio" data-wa="Hola, quisiera enviar un plano para cotizar pernos de anclaje." href="#">Enviar un plano</a>
+      </div>
+    </div>
+    <div class="hero-3d" id="hero3d">
+      <div class="fallback" aria-hidden="true"><img src="img/perno-estructural.webp" alt=""></div>
+      <div class="hud hud1"><span>Rosca <b>UNC</b></span></div>
+      <div class="hud hud2 izq"><span>Tuerca pesada <b>2H</b></span></div>
+      <div class="hud hud3"><span>Grado <b>A325</b></span></div>
+    </div>
+  </div>
+  <span class="scroll-hint" aria-hidden="true"></span>
+  <div class="hero-pie">
+    <div class="wrap">
+      <div class="dato"><b data-cuenta="21">21</b><span>productos con ficha técnica</span></div>
+      <div class="dato"><b>1/4″ a 3″</b><span>y métricos de M3 a M24</span></div>
+      <div class="dato"><b data-cuenta="5">5</b><span>acabados y calidades a elegir</span></div>
+      <div class="dato"><b>Todo el Perú</b><span>despacho desde Comas</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="normas" aria-label="Normas con las que trabajamos">
+  <div class="pista" id="pista"></div>
+</div>
+
+<section class="sec" id="lineas" aria-labelledby="h-lin">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="num-sec rv">Productos</span><h2 id="h-lin" class="h2 rv">Cinco líneas, una ficha técnica para cada pieza</h2></div>
+      <p class="rv">Elige una línea para abrir su catálogo: fotos, planos con cotas, calidades y cuadros de medida listos para cotizar.</p>
+    </div>
+    <div class="lineas" id="lineas-grid"></div>
+  </div>
+</section>
+
+<section class="sec sec-cat" id="catalogo" aria-labelledby="h-cat">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="num-sec rv">Catálogo técnico</span><h2 id="h-cat" class="h2 rv">Toca tu medida y cotízala</h2></div>
+      <p class="rv">Cambia entre foto y plano, recorre el cuadro de medidas y marca la fila que necesitas. El botón de WhatsApp lleva el producto y la medida.</p>
+    </div>
+    <div class="familias rv" role="tablist" aria-label="Familias de producto" id="familias"></div>
+    <div class="visor rv">
+      <div class="lista" id="lista" aria-label="Productos"></div>
+      <article class="ficha" id="ficha" aria-live="polite"></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="calidades" aria-labelledby="h-cal">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="num-sec rv">Calidades</span><h2 id="h-cal" class="h2 rv">Cómo reconocer la calidad de un perno</h2></div>
+      <p class="rv">La resistencia viene marcada en la cabeza. Así compruebas en obra que lo que recibes es lo que pediste.</p>
+    </div>
+    <div class="marcas" id="marcas"></div>
+    <div class="f1554 rv" id="f1554-box">
+      <div>
+        <h3 class="h3" style="font-size:30px;font-variation-settings:'wdth' 114;font-weight:820">Anclajes ASTM F1554: el color en la punta</h3>
+        <p>Los pernos de anclaje F1554 se identifican con pintura en el extremo que queda a la vista. El número del grado es su límite de fluencia mínimo en ksi.</p>
+      </div>
+      <div class="varillas-f" id="f1554"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="acabados" aria-labelledby="h-acab" style="padding-top:40px">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="num-sec rv">Acabados</span><h2 id="h-acab" class="h2 rv">Elige el acabado por el ambiente</h2></div>
+      <p class="rv">El mismo perno dura años más o menos según dónde va instalado. Esta es la regla con la que recomendamos.</p>
+    </div>
+    <div class="acabados">
+      <div class="acabado rv" style="--i:0"><div class="sw sw-negro" role="img" aria-label="Muestra de acabado negro"></div><div class="tx"><h3 class="h3">Negro o pavonado</h3><p>Para piezas embebidas en concreto, que irán pintadas o en interiores secos.</p></div></div>
+      <div class="acabado rv" style="--i:1"><div class="sw sw-zinc" role="img" aria-label="Muestra de acabado zincado"></div><div class="tx"><h3 class="h3">Zincado</h3><p>Protección superficial para interiores y ambientes moderados.</p></div></div>
+      <div class="acabado rv" style="--i:2"><div class="sw sw-galv" role="img" aria-label="Muestra de acabado galvanizado en caliente"><svg viewBox="0 0 400 132" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><polygon points="151,128 132,99 158,83 171,81 174,117" fill="rgb(170,174,179)" stroke="#8c959e" stroke-width=".8"/><polygon points="169,-3 203,11 225,-8 295,-105 304,-225 296,-387 169,-4" fill="rgb(159,163,168)" stroke="#8c959e" stroke-width=".8"/><polygon points="105,102 80,35 75,32 65,62 89,109 96,108" fill="rgb(175,179,184)" stroke="#8c959e" stroke-width=".8"/><polygon points="254,115 255,111 298,94 304,94 329,106 338,115 305,188 253,120" fill="rgb(191,195,200)" stroke="#8c959e" stroke-width=".8"/><polygon points="169,-3 145,12 53,-42 15,-125 -23,-253 169,-4" fill="rgb(153,157,162)" stroke="#8c959e" stroke-width=".8"/><polygon points="57,-1 75,32 65,62 58,65 38,54 53,7" fill="rgb(154,158,163)" stroke="#8c959e" stroke-width=".8"/><polygon points="65,62 89,109 75,114 35,89 58,65" fill="rgb(202,206,211)" stroke="#8c959e" stroke-width=".8"/><polygon points="421,35 395,23 395,-34 483,9" fill="rgb(184,188,193)" stroke="#8c959e" stroke-width=".8"/><polygon points="195,118 204,167 253,120 254,115 196,112" fill="rgb(156,160,165)" stroke="#8c959e" stroke-width=".8"/><polygon points="298,94 271,53 309,42 304,94" fill="rgb(173,177,182)" stroke="#8c959e" stroke-width=".8"/><polygon points="38,54 15,84 15,84 35,89 58,65" fill="rgb(187,191,196)" stroke="#8c959e" stroke-width=".8"/><polygon points="132,99 114,98 119,44 137,32 158,83" fill="rgb(153,157,162)" stroke="#8c959e" stroke-width=".8"/><polygon points="151,128 151,130 123,178 96,108 105,102 114,98 132,99" fill="rgb(182,186,191)" stroke="#8c959e" stroke-width=".8"/><polygon points="359,45 345,49 312,37 300,-17 305,-45 376,24" fill="rgb(163,167,172)" stroke="#8c959e" stroke-width=".8"/><polygon points="215,60 203,11 225,-8 258,33 252,46 224,63" fill="rgb(152,156,161)" stroke="#8c959e" stroke-width=".8"/><polygon points="169,-3 203,11 215,60 195,71 144,19 145,12" fill="rgb(155,159,164)" stroke="#8c959e" stroke-width=".8"/><polygon points="312,37 309,42 271,53 252,46 258,33 300,-17" fill="rgb(177,181,186)" stroke="#8c959e" stroke-width=".8"/><polygon points="174,117 177,119 195,118 196,112 191,75 171,81" fill="rgb(176,180,185)" stroke="#8c959e" stroke-width=".8"/><polygon points="123,178 130,930 202,170 174,145 151,130" fill="rgb(154,158,163)" stroke="#8c959e" stroke-width=".8"/><polygon points="75,114 19,202 8,131 15,84 35,89" fill="rgb(165,169,174)" stroke="#8c959e" stroke-width=".8"/><polygon points="171,81 191,75 195,71 144,19 137,32 158,83" fill="rgb(155,159,164)" stroke="#8c959e" stroke-width=".8"/><polygon points="224,63 252,46 271,53 298,94 255,111" fill="rgb(185,189,194)" stroke="#8c959e" stroke-width=".8"/><polygon points="-17,67 -10,69 15,84 15,84 8,131 -80,82" fill="rgb(177,181,186)" stroke="#8c959e" stroke-width=".8"/><polygon points="196,112 191,75 195,71 215,60 224,63 255,111 254,115" fill="rgb(153,157,162)" stroke="#8c959e" stroke-width=".8"/><polygon points="420,81 533,124 418,134" fill="rgb(202,206,211)" stroke="#8c959e" stroke-width=".8"/><polygon points="300,-17 258,33 225,-8 295,-105 305,-45" fill="rgb(186,190,195)" stroke="#8c959e" stroke-width=".8"/><polygon points="359,45 377,88 414,71 421,35 395,23 376,24" fill="rgb(157,161,166)" stroke="#8c959e" stroke-width=".8"/><polygon points="376,24 395,23 395,-34 304,-225 295,-105 305,-45" fill="rgb(164,168,173)" stroke="#8c959e" stroke-width=".8"/><polygon points="105,102 80,35 119,44 114,98" fill="rgb(190,194,199)" stroke="#8c959e" stroke-width=".8"/><polygon points="345,49 329,106 304,94 309,42 312,37" fill="rgb(190,194,199)" stroke="#8c959e" stroke-width=".8"/><polygon points="57,-1 53,-42 15,-125 -17,67 -10,69 53,7" fill="rgb(187,191,196)" stroke="#8c959e" stroke-width=".8"/><polygon points="57,-1 53,-42 145,12 144,19 137,32 119,44 80,35 75,32" fill="rgb(153,157,162)" stroke="#8c959e" stroke-width=".8"/><polygon points="53,7 -10,69 15,84 38,54" fill="rgb(186,190,195)" stroke="#8c959e" stroke-width=".8"/><polygon points="151,128 151,130 174,145 177,119 174,117" fill="rgb(187,191,196)" stroke="#8c959e" stroke-width=".8"/><polygon points="359,45 377,88 359,115 338,115 329,106 345,49" fill="rgb(175,179,184)" stroke="#8c959e" stroke-width=".8"/><polygon points="195,118 177,119 174,145 202,170 204,167" fill="rgb(153,157,162)" stroke="#8c959e" stroke-width=".8"/><polygon points="420,81 418,134 399,147 359,115 377,88 414,71" fill="rgb(164,168,173)" stroke="#8c959e" stroke-width=".8"/><polygon points="399,147 362,2718 305,188 338,115 359,115" fill="rgb(152,156,161)" stroke="#8c959e" stroke-width=".8"/></svg></div><div class="tx"><h3 class="h3">Galvanizado en caliente</h3><p>Para exteriores, zonas industriales y la máxima durabilidad anticorrosiva.</p></div></div>
+      <div class="acabado rv" style="--i:3"><div class="sw sw-inox" role="img" aria-label="Muestra de acero inoxidable"></div><div class="tx"><h3 class="h3">Inoxidable 304 / 316</h3><p>Para ambientes húmedos, mineros o químicos. El 316 resiste mejor la zona costera.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="fabricacion" aria-labelledby="h-fab">
+  <div class="banda">
+    <img src="img/planta-negros.webp" alt="Lote de pernos de anclaje con placas en acabado negro, fabricados en planta" id="banda-img">
+    <div class="wrap">
+      <span class="num-sec rv">Fabricación</span>
+      <h2 id="h-fab" class="h2 rv">Lo que no está en catálogo, lo fabricamos</h2>
+      <p class="rv">Desde un plano, un croquis o una muestra física: ajustamos diámetro, largo, rosca, geometría, material y acabado.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="capac">
+      <div class="rv" style="--i:0"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M16 3v20M10 23h12M12 27h8M16 7l-3 2M16 11l-3 2M16 15l-3 2M16 7l3 2M16 11l3 2M16 15l3 2"/></svg><h3 class="h3">Pernos de anclaje a medida</h3><p>Tipo L, tipo J, rectos y configuraciones especiales para cimentaciones, placas base y equipos pesados.</p></div>
+      <div class="rv" style="--i:1"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="5" y="20" width="22" height="6"/><path d="M9 20V8h14v12M13 8V4h6v4"/></svg><h3 class="h3">Estructuras metálicas</h3><p>Placas base, pedestales y soportes, incluidos los de telecomunicaciones, habilitados y soldados.</p></div>
+      <div class="rv" style="--i:2"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 16h24M8 12v8M12 12v8M16 12v8M20 12v8M24 12v8"/><circle cx="27" cy="7" r="3"/></svg><h3 class="h3">Corte y habilitado de varillas</h3><p>Espárragos y varillas en el largo exacto para agilizar el montaje en obra.</p></div>
+    </div>
+    <div class="fotos-fab">
+      <figure class="rv"><img src="img/planta-lote.webp" alt="Pernos de anclaje rectos galvanizados con tuercas y arandelas" loading="lazy"><figcaption>Anclajes rectos con tuerca y arandela</figcaption></figure>
+      <figure class="rv" style="--i:1"><img src="img/planta-galvanizados.webp" alt="Anclajes con placa galvanizados en caliente" loading="lazy"><figcaption>Galvanizado por inmersión en caliente</figcaption></figure>
+    </div>
+    <ol class="pasos" id="pasos" aria-label="Cómo trabajamos">
+      <li><h3 class="h3">Nos envías el requerimiento</h3><p>Plano, muestra, medida o especificación técnica.</p></li>
+      <li><h3 class="h3">Revisión técnica</h3><p>Definimos material, rosca, geometría y acabado para tu aplicación.</p></li>
+      <li><h3 class="h3">Fabricación</h3><p>Corte, roscado, soldadura y acabado con control dimensional.</p></li>
+      <li><h3 class="h3">Entrega</h3><p>Recojo en planta o despacho coordinado a tu obra en todo el Perú.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="h-sec">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:28px">
+      <div><span class="num-sec rv">Sectores</span><h2 id="h-sec" class="h2 rv">A quién atendemos</h2></div>
+    </div>
+    <div class="sectores rv">
+      <span>Construcción</span><span>Estructuras metálicas</span><span>Metalmecánica</span><span>Montaje electromecánico</span><span>Minería</span><span>Energía</span><span>Infraestructura</span><span>Telecomunicaciones</span>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" aria-labelledby="h-con">
+  <div class="wrap">
+    <div class="contacto-box rv">
+      <div class="contacto">
+        <div>
+          <h2 id="h-con" class="h2">Pide tu cotización</h2>
+          <p class="sub">Completa lo que sepas. Se abrirá WhatsApp con tu mensaje listo; si tienes un plano, adjúntalo en el chat.</p>
+          <form id="form-cot" novalidate>
+            <label>Nombre<input name="nombre" autocomplete="name"></label>
+            <label>Empresa<input name="empresa" autocomplete="organization"></label>
+            <label class="full">Producto<select name="producto" id="f-producto"></select></label>
+            <label>Medida<input name="medida" id="f-medida" placeholder="Ej. 3/4″ x 12″ o M16"></label>
+            <label>Cantidad<input name="cantidad" inputmode="numeric" placeholder="Ej. 200 unidades"></label>
+            <label class="full">Detalle<textarea name="detalle" placeholder="Calidad, acabado, fecha de entrega, lugar de obra…"></textarea></label>
+            <a class="btn" id="f-enviar" href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.05c-.24.68-1.42 1.3-1.950 1.35-.5.05-1.13.07-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.8-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.27-.29.58-.36.78-.36h.56c.18 0 .42-.07.66.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.19-.14.31-.29.48-.14.17-.3.38-.43.5-.14.14-.29.3-.12.58.17.29.75 1.24 1.61 2 1.11.99 2.04 1.3 2.33 1.44.29.14.46.12.63-.07.17-.19.72-.84.91-1.130.19-.29.39-.24.65-.14.27.1 1.68.79 1.97.94.29.14.48.22.55.34.07.12.07.7-.17 1.38z"/></svg>
+ Enviar por WhatsApp</a>
+            <span class="aviso">Respondemos de lunes a sábado.</span>
+          </form>
+        </div>
+        <dl class="datos">
+          <div><dt>WhatsApp y teléfono</dt><dd><a data-wa="Hola, quisiera cotizar pernería." href="#">+51 940 479 303</a><small>Lunes a sábado, 8:30 a. m. a 6:30 p. m.</small></dd></div>
+          <div><dt>Correo</dt><dd><a href="mailto:victorm@anclajesperu.com">victorm@anclajesperu.com</a></dd></div>
+          <div><dt>Planta y despacho</dt><dd>Jr. E. Correa 407, Santa Luzmila<small>Av. Los Ángeles con Av. El Retablo, Comas, Lima</small></dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="logo-f"><img src="img/logo.webp" alt="Anclajes y Pernos SAC" width="640" height="188"></span>
+    <p>Pernería importada y anclajes fabricados a medida. Comas, Lima, Perú.</p>
+    <p>© 2026 Anclajes y Pernos SAC</p>
+  </div>
+</footer>
+<a class="wa-float" data-wa="Hola, quisiera cotizar pernería." href="#" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.05c-.24.68-1.42 1.3-1.950 1.35-.5.05-1.13.07-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.8-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.27-.29.58-.36.78-.36h.56c.18 0 .42-.07.66.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.19-.14.31-.29.48-.14.17-.3.38-.43.5-.14.14-.29.3-.12.58.17.29.75 1.24 1.61 2 1.11.99 2.04 1.3 2.33 1.44.29.14.46.12.63-.07.17-.19.72-.84.91-1.130.19-.29.39-.24.65-.14.27.1 1.68.79 1.97.94.29.14.48.22.55.34.07.12.07.7-.17 1.38z"/></svg>
+</a>
+
+<script>
+const WA='51940479303';
+const P=[{"id": "anclaje-recto", "fam": "anclajes", "nombre": "Perno de anclaje recto", "resumen": "Espárrago de anclaje sin dobleces para fijaciones pasantes y placas base que llevan tuerca y arandela en ambos extremos. Se fabrica según el plano de tu cimentación.", "specs": [["Calidades", "ASTM A36, ASTM A193 B7, ASTM F1554"], ["Forma", "Recta"], ["Dimensiones", "100 % a medida: D, largo total y tramos roscados Lt1 y Lt2"], ["Acabados", "Fierro negro, galvanizado en caliente, zincado"], ["Uso", "Fijación mecánica o pasante en concreto, estructural e industrial"]], "foto": "anclaje-recto.webp", "plano": "anclaje-recto-plano.webp", "medidas": null, "nota_medidas": "No trabajamos con medidas cerradas: diámetro, largo total y tramos roscados se configuran según tu plano. Envíanos el plano o la lista de materiales y lo cotizamos.", "calidades": {"titulo": "ASTM F1554 · propiedades mecánicas", "cols": ["Grado", "Tamaño (pulg)", "Tracción (ksi)", "Fluencia mín. (ksi)", "Fluencia mín. (MPa)", "Elong. mín. %", "RA mín. %"], "rows": [["36", "1/2 – 4", "58 – 80", "36", "248", "23", "40"], ["55", "1/2 – 4", "75 – 95", "55", "380", "21", "30"], ["105", "1/2 – 3", "125 – 150", "105", "724", "15", "45"]]}, "grado_chips": ["A36", "B7", "F1554"]}, {"id": "perno-expansion", "fam": "anclajes", "nombre": "Perno de expansión", "resumen": "Anclaje mecánico que se expande dentro del concreto ya curado al ajustar la tuerca.", "specs": [["Diámetros", "1/4″ hasta 1″"], ["Longitudes", "A solicitud del cliente"], ["Rosca", "Ordinaria UNC 2A"], ["Materiales", "Acero al bajo carbono, acero inoxidable AISI 304 y 316"], ["Acabados", "Zincado electrolítico (carbono), natural pasivado (inoxidable)"]], "foto": "perno-expansion.webp", "plano": "perno-expansion-plano.webp", "medidas": {"titulo": "Torque y cargas", "unidad": "Grado A36 / AISI 304", "cols": ["Ø (pulg)", "Torque (N·m)", "Carga de tracción (kN)", "Carga de trabajo (kN)"], "rows": [["1/4", "14", "10.5", "7.1"], ["3/8", "60", "19", "12"], ["1/2", "100", "33.7", "28"], ["5/8", "140", "62.8", "46"], ["3/4", "210", "98", "70"]]}, "calidades": null, "grado_chips": ["A36", "AISI 304", "AISI 316"], "nota_medidas": null}, {"id": "taco-expansion", "fam": "anclajes", "nombre": "Taco de expansión", "resumen": "Casquillo con rosca interior para fijaciones rápidas en concreto: se instala al ras y recibe un perno o varilla.", "specs": [["Diámetros", "1/4″ hasta 1″"], ["Rosca", "Ordinaria UNC"], ["Materiales", "Acero al bajo carbono, acero inoxidable AISI 304"], ["Acabados", "Zincado electrolítico (carbono), natural (inoxidable)"]], "foto": "taco-expansion.webp", "plano": null, "medidas": {"titulo": "Cargas", "unidad": "Grado A36 / AISI 304", "cols": ["Ø (pulg)", "Carga de tracción (kN)", "Carga de trabajo (kN)"], "rows": [["1/4", "10.5", "7.1"], ["3/8", "19.0", "12.0"], ["1/2", "33.7", "28.0"], ["5/8", "62.8", "46.0"], ["3/4", "98.0", "70.0"]]}, "calidades": null, "grado_chips": ["A36", "AISI 304"], "nota_medidas": null}, {"id": "perno-hexagonal", "fam": "pernos", "nombre": "Perno hexagonal", "resumen": "El perno de uso general en montaje mecánico y estructural, en rosca gruesa o fina y tres grados de resistencia.", "specs": [["Grados", "SAE 2, 5 y 8"], ["Diámetros", "1/4″ hasta 1 1/2″"], ["Rosca", "UNC (gruesa) y UNF (fina)"], ["Material", "Acero de bajo o medio carbono; grado 8 tratado térmicamente"]], "foto": null, "plano": "perno-hexagonal-plano.webp", "medidas": {"titulo": "Cuadro de medidas", "unidad": "Pulgadas", "cols": ["Ø (pulg)", "Decimal", "Hilos UNC", "Hilos UNF", "W entre caras", "K altura", "C entre esquinas", "T rosca ≤ 6″", "T rosca > 6″"], "rows": [["1/4", "0.250", "20", "28", "7/16", "11/64", "0.494", "0.75", "1"], ["5/16", "0.312", "18", "24", "1/2", "7/32", "0.564", "0.875", "1.125"], ["3/8", "0.375", "16", "24", "9/16", "1/4", "0.635", "1", "1.25"], ["7/16", "0.437", "14", "20", "5/8", "19/64", "0.704", "1.125", "1.375"], ["1/2", "0.500", "13", "20", "3/4", "11/32", "0.846", "1.25", "1.5"], ["9/16", "0.562", "12", "18", "13/16", "23/64", "0.924", "1.375", "1.625"], ["5/8", "0.625", "11", "18", "15/16", "27/64", "1.058", "1.5", "1.75"], ["3/4", "0.750", "10", "16", "1 1/8", "1/2", "1.269", "1.75", "2"], ["7/8", "0.875", "9", "14", "1 5/16", "37/64", "1.481", "2", "2.25"], ["1", "1.000", "8", "12", "1 1/2", "43/64", "1.692", "2.25", "2.5"], ["1 1/8", "1.125", "7", "12", "1 11/16", "3/4", "1.904", "2.5", "2.75"], ["1 1/4", "1.250", "7", "12", "1 7/8", "27/32", "2.115", "2.75", "3"], ["1 1/2", "1.500", "6", "12", "2 1/4", "1", "2.539", "3.25", "3.5"]]}, "calidades": {"titulo": "Grados de resistencia", "cols": ["Grado", "Diámetro", "Material", "Dureza Rockwell", "Tracción mín. (psi)"], "rows": [["2", "1/4″ – 3/4″", "Acero de bajo o medio carbono", "B 80 – B 100", "74 000"], ["2", "más de 3/4″ – 1 1/2″", "Acero de bajo o medio carbono", "B 70 – B 100", "60 000"], ["5", "1/4″ – 1″", "Acero de bajo o medio carbono", "C 25 – C 34", "120 000"], ["5", "1 1/8″ – 1 1/2″", "Acero de bajo o medio carbono", "C 19 – C 32", "105 000"], ["8", "1/4″ – 1 1/2″", "Acero de medio carbono tratado térmicamente", "C 33 – C 39", "150 000"]]}, "grado_chips": ["Grado 2", "Grado 5", "Grado 8"], "nota_medidas": null}, {"id": "perno-estructural", "fam": "pernos", "nombre": "Perno estructural", "resumen": "Perno hexagonal pesado para uniones de acero estructural: conexiones de vigas, columnas y torres.", "specs": [["Calidades", "ASTM A325 Tipo 1, ASTM A490 Tipo 1"], ["Diámetros", "1/2″ hasta 1 1/2″"], ["Rosca", "UNC (gruesa)"], ["Material", "Acero de medio carbono templado y revenido"]], "foto": "perno-estructural.webp", "plano": "perno-estructural-plano.webp", "medidas": {"titulo": "Cuadro de medidas", "unidad": "Pulgadas", "cols": ["Ø (pulg)", "Hilos UNC", "W entre caras", "K altura", "T rosca (ref.)"], "rows": [["1/2", "13", "7/8", "5/16", "1.00"], ["5/8", "11", "1 1/16", "25/64", "1.25"], ["3/4", "10", "1 1/4", "15/32", "1.38"], ["7/8", "9", "1 7/16", "35/64", "1.50"], ["1", "8", "1 5/8", "39/64", "1.75"], ["1 1/8", "7", "1 13/16", "11/16", "2.00"], ["1 1/4", "7", "2", "25/32", "2.00"], ["1 3/8", "6", "2 3/16", "27/32", "2.25"], ["1 1/2", "6", "2 3/8", "15/16", "2.25"]]}, "calidades": {"titulo": "Calidades", "cols": ["Calidad", "Diámetro", "Dureza Rockwell", "Tracción mín. (psi)"], "rows": [["A325 Tipo 1", "1/2″ – 1″", "C 25 – C 34", "105 000"], ["A325 Tipo 1", "1 1/8″ – 1 1/2″", "C 19 – C 30", "105 000"], ["A490 Tipo 1", "1/2″ – 1 1/2″", "C 33 – C 39", "150 000"]]}, "grado_chips": ["A325", "A490"], "nota_medidas": null}, {"id": "perno-milimetrico", "fam": "pernos", "nombre": "Perno hexagonal milimétrico", "resumen": "Perno métrico de paso ordinario para maquinaria y equipos importados que trabajan en milímetros.", "specs": [["Clases", "5.8, 8.8 y 10.9"], ["Diámetros", "M3 hasta M24"], ["Material", "Acero al bajo carbono (5.8), carbono tratado térmicamente (8.8), aleado tratado (10.9)"]], "foto": "perno-milimetrico.webp", "plano": "perno-milimetrico-plano.webp", "medidas": {"titulo": "Cuadro de medidas", "unidad": "Milímetros", "cols": ["Ø nominal", "F entre caras (máx.)", "G entre esquinas (mín.)", "K altura (máx.)", "T rosca (ref.)"], "rows": [["M3", "5.5", "6.01", "2.12", "12"], ["M4", "7", "7.66", "2.92", "14"], ["M5", "8", "8.79", "3.65", "16"], ["M6", "10", "11.05", "4.15", "18"], ["M8", "13", "14.38", "5.45", "22"], ["M10", "17", "18.9", "6.58", "26"], ["M12", "19", "21.1", "7.68", "30"], ["M14", "22", "24.49", "8.98", "34"], ["M16", "24", "26.75", "10.18", "38"], ["M20", "30", "32.95", "12.72", "46"], ["M22", "34", "37.29", "14.22", "50"], ["M24", "36", "39.55", "15.22", "54"]]}, "calidades": {"titulo": "Clases de resistencia", "cols": ["Clase", "Diámetro", "Material", "Dureza Rockwell", "Tracción mín. (psi)"], "rows": [["5.8", "M3 – M24", "Acero al bajo carbono", "B 82 – B 95", "75 500"], ["8.8", "M3 – M16", "Acero al carbono tratado térmicamente", "C 22 – C 32", "116 000"], ["8.8", "M18 – M24", "Acero al carbono tratado térmicamente", "C 22 – C 36", "120 300"], ["10.9", "M3 – M16", "Acero al carbono aleado tratado térmicamente", "C 32 – C 39", "150 800"]]}, "grado_chips": ["5.8", "8.8", "10.9"], "nota_medidas": null}, {"id": "perno-inoxidable", "fam": "pernos", "nombre": "Perno hexagonal inoxidable", "resumen": "Para ambientes húmedos, mineros, químicos o alimentarios donde el acero al carbono se corroe.", "specs": [["Calidades", "SS-304 y SS-316 (austenítico)"], ["Diámetros", "1/4″ hasta 1 1/2″"], ["Rosca", "UNC y UNF"]], "foto": "perno-inoxidable.webp", "plano": "perno-inoxidable-plano.webp", "medidas": {"titulo": "Cuadro de medidas", "unidad": "Pulgadas", "cols": ["Ø (pulg)", "Decimal", "Hilos UNC", "Hilos UNF", "W entre caras", "K altura", "C entre esquinas", "T rosca ≤ 6″", "T rosca > 6″"], "rows": [["1/4", "0.250", "20", "28", "7/16", "11/64", "0.494", "0.750", "1.000"], ["5/16", "0.312", "18", "24", "1/2", "7/32", "0.564", "0.875", "1.125"], ["3/8", "0.375", "16", "24", "9/16", "1/4", "0.635", "1.000", "1.250"], ["7/16", "0.437", "14", "20", "5/8", "19/64", "0.704", "1.125", "1.375"], ["1/2", "0.500", "13", "20", "3/4", "11/32", "0.846", "1.250", "1.500"], ["9/16", "0.562", "12", "18", "13/16", "23/64", "0.924", "1.375", "1.625"], ["5/8", "0.625", "11", "18", "15/16", "27/64", "1.058", "1.500", "1.750"], ["3/4", "0.750", "10", "16", "1 1/8", "1/2", "1.269", "1.750", "2.000"], ["7/8", "0.875", "9", "14", "1 5/16", "37/64", "1.481", "2.000", "2.250"], ["1", "1.000", "8", "12", "1 1/2", "43/64", "1.692", "2.250", "2.500"], ["1 1/8", "1.125", "7", "12", "1 11/16", "3/4", "1.904", "2.500", "2.750"], ["1 1/4", "1.250", "7", "12", "1 7/8", "27/32", "2.115", "2.750", "3.000"], ["1 1/2", "1.500", "6", "12", "2 1/4", "1", "2.539", "3.250", "3.500"]]}, "calidades": {"titulo": "Clases de acero", "cols": ["Clase", "Composición química %", "Dureza Rockwell", "Tracción mín. (psi)"], "rows": [["SS-304", "C ≤ 0.08 · Cr 18–20 · Ni 8–10.5", "B 70 – B 100", "60 000"], ["SS-316", "C ≤ 0.08 · Cr 16–18 · Ni 10–14 · Mo 2–3", "B 70 – B 100", "60 000"]]}, "grado_chips": ["SS-304", "SS-316"], "nota_medidas": null}, {"id": "perno-socket", "fam": "pernos", "nombre": "Perno socket (allen)", "resumen": "Cabeza cilíndrica con hexágono interior para maquinaria, moldes y ensambles de precisión donde no entra una llave.", "specs": [["Clase", "12.9"], ["Diámetros", "M3 hasta M20"], ["Material", "Acero aleado templado y revenido"]], "foto": "perno-socket.webp", "plano": "perno-socket-plano.webp", "medidas": {"titulo": "Cuadro de medidas", "unidad": "Milímetros", "cols": ["Medida", "D cabeza mín.", "D cabeza máx.", "K altura mín.", "K altura máx.", "S hexágono mín.", "S hexágono máx.", "A mín.", "b rosca (ref.)"], "rows": [["M3", "5.32", "5.5", "2.86", "3", "2.52", "2.58", "1.3", "18"], ["M4", "6.78", "7", "3.82", "4", "3.02", "3.08", "2", "20"], ["M5", "8.28", "8.5", "4.82", "5", "4.02", "4.09", "2.5", "22"], ["M6", "9.78", "10", "5.7", "6", "5.02", "5.14", "3", "24"], ["M8", "12.73", "13", "7.64", "8", "6.02", "6.14", "4", "28"], ["M10", "15.73", "16", "9.64", "10", "8.02", "8.17", "5", "32"], ["M12", "17.73", "18", "11.57", "12", "10.02", "10.17", "6", "36"], ["M14", "20.67", "21", "13.57", "14", "12.03", "12.21", "7", "40"], ["M16", "23.67", "24", "15.57", "16", "14.03", "14.21", "8", "44"], ["M20", "29.67", "30", "19.48", "20", "17.23", "17.23", "10", "52"]]}, "calidades": {"titulo": "Clase de resistencia", "cols": ["Clase", "Material", "Dureza Rockwell", "Tracción mín. (psi)"], "rows": [["12.9", "Acero aleado templado y revenido", "C 39 – C 44", "177 000"]]}, "grado_chips": ["12.9"], "nota_medidas": null}, {"id": "perno-coche", "fam": "pernos", "nombre": "Perno cabeza coche", "resumen": "Cabeza redonda con cuello cuadrado que se traba en la madera o el agujero; no gira al ajustar la tuerca.", "specs": [["Norma dimensional", "ASME B18.5"], ["Norma mecánica", "SAE J429 grado 2"], ["Diámetros", "1/4″ hasta 3/4″"], ["Acabados", "Zincado, pavonado"]], "foto": "perno-coche.webp", "plano": "perno-coche-plano.webp", "medidas": {"titulo": "Cuadro de medidas", "unidad": "Pulgadas", "cols": ["D (pulg)", "Hilos por pulg.", "DH Ø cabeza", "K altura cabeza", "P altura cuadrante", "S entre caras"], "rows": [["1/4", "20", "9/16", "1/8", "0.125", "0.245"], ["5/16", "18", "11/16", "5/32", "0.156", "0.307"], ["3/8", "16", "13/16", "3/16", "0.188", "0.368"], ["7/16", "14", "15/16", "7/32", "0.219", "0.431"], ["1/2", "13", "1 1/16", "1/4", "0.250", "0.492"], ["5/8", "11", "1 1/4", "5/16", "0.313", "0.616"], ["3/4", "10", "1 1/2", "3/8", "0.375", "0.741"]]}, "calidades": {"titulo": "Grado de resistencia", "cols": ["Grado", "Material", "Dureza Rockwell", "Tracción mín. (psi)"], "rows": [["2", "Acero al bajo carbono", "B 70 – B 100", "60 000"]]}, "grado_chips": ["Grado 2"], "nota_medidas": null}, {"id": "tuerca-hexagonal", "fam": "tuercas", "nombre": "Tuerca hexagonal", "resumen": "Complemento estándar para pernos, espárragos y varillas, en rosca gruesa o fina.", "specs": [["Grados", "2, 5 y 8"], ["Diámetros", "1/4″ hasta 1 1/2″"], ["Rosca", "UNC y UNF"]], "foto": "tuerca-hexagonal.webp", "plano": "tuerca-hexagonal-plano.webp", "medidas": {"titulo": "Cuadro de medidas", "unidad": "Pulgadas", "cols": ["D (pulg)", "Decimal", "Hilos UNC", "Hilos UNF", "C entre caras", "m altura"], "rows": [["1/4", "0.250", "20", "28", "7/16", "7/32"], ["5/16", "0.312", "18", "24", "1/2", "17/64"], ["3/8", "0.375", "16", "24", "9/16", "21/64"], ["7/16", "0.437", "14", "20", "11/16", "3/8"], ["1/2", "0.500", "13", "20", "3/4", "7/16"], ["9/16", "0.562", "12", "18", "7/8", "31/64"], ["5/8", "0.625", "11", "18", "15/16", "35/64"], ["3/4", "0.750", "10", "16", "1 1/8", "41/64"], ["7/8", "0.875", "9", "14", "1 5/16", "3/4"], ["1", "1.000", "8", "12", "1 1/2", "55/64"], ["1 1/8", "1.125", "7", "12", "1 11/16", "31/32"], ["1 1/4", "1.250", "7", "12", "1 7/8", "1 1/16"], ["1 1/2", "1.500", "6", "12", "2 1/4", "1 9/32"]]}, "calidades": {"titulo": "Grados de resistencia", "cols": ["Grado", "Diámetro", "Dureza Rockwell", "Resistencia UNC (psi)", "Resistencia UNF (psi)"], "rows": [["2", "1/4″ – 1 1/2″", "C 32 máx.", "90 000", "80 000"], ["5", "1/4″ – 1″", "C 32 máx.", "120 000", "109 000"], ["5", "1 1/8″ – 1 1/2″", "C 32 máx.", "105 000", "94 000"], ["8", "1/4″ – 5/8″", "C 24 – C 32", "150 000", "150 000"], ["8", "3/4″ – 1″", "C 26 – C 34", "150 000", "150 000"], ["8", "1 1/8″ – 1 1/2″", "C 26 – C 36", "150 000", "150 000"]]}, "grado_chips": ["Grado 2", "Grado 5", "Grado 8"], "nota_medidas": null}, {"id": "tuerca-2h", "fam": "tuercas", "nombre": "Tuerca estructural pesada 2H", "resumen": "Tuerca hexagonal pesada para pernos de anclaje, espárragos B7 y uniones estructurales de alta carga.", "specs": [["Grado", "2H (ASTM A194)"], ["Diámetros", "1/2″ hasta 1 1/2″ (y mayores)"], ["Rosca", "UNC"], ["Material", "Acero de medio carbono tratado térmicamente"]], "foto": "tuerca-2h.webp", "plano": "tuerca-2h-plano.webp", "medidas": {"titulo": "Cuadro de medidas", "unidad": "Pulgadas", "cols": ["D (pulg)", "Decimal", "Hilos UNC", "F entre caras", "H altura"], "rows": [["1/2", "0.500", "13", "7/8", "31/64"], ["5/8", "0.625", "11", "1 1/16", "39/64"], ["3/4", "0.750", "10", "1 1/4", "47/64"], ["7/8", "0.875", "9", "1 7/16", "55/64"], ["1", "1.000", "8", "1 5/8", "63/64"], ["1 1/8", "1.125", "7", "1 13/16", "1 7/64"], ["1 1/4", "1.250", "7", "2", "1 7/32"], ["1 1/2", "1.500", "6", "2 3/8", "1 15/32"]]}, "calidades": {"titulo": "Grado de resistencia", "cols": ["Grado", "Diámetro", "Dureza Rockwell", "Carga de prueba (psi)"], "rows": [["2H", "1/2″ – 1 1/2″", "C 24 – C 35", "175 000"], ["2H", "más de 1 1/2″", "C 35 máx.", "175 000"]]}, "grado_chips": ["2H"], "nota_medidas": null}, {"id": "tuerca-milimetrica", "fam": "tuercas", "nombre": "Tuerca milimétrica", "resumen": "Tuerca hexagonal métrica de paso ordinario, pareja natural del perno milimétrico.", "specs": [["Clases", "5, 8 y 10"], ["Diámetros", "M3 hasta M24"], ["Material", "Acero al bajo carbono (5), mediano carbono (8), templado y revenido (10)"]], "foto": "tuerca-milimetrica.webp", "plano": "tuerca-milimetrica-plano.webp", "medidas": {"titulo": "Cuadro de medidas", "unidad": "Milímetros", "cols": ["D", "Paso", "F entre caras", "C entre esquinas", "m altura"], "rows": [["M3", "0.5", "5.5", "6.01", "2.4"], ["M4", "0.7", "7", "7.66", "3.2"], ["M5", "0.8", "8", "8.79", "4"], ["M6", "1", "10", "11.05", "5"], ["M8", "1.25", "13", "14.38", "6.5"], ["M10", "1.5", "17", "18.9", "8"], ["M12", "1.75", "19", "21.1", "10"], ["M14", "2", "22", "24.49", "11"], ["M16", "2", "24", "26.75", "13"], ["M20", "2.5", "30", "32.95", "16"], ["M22", "2.5", "34", "37.29", "18"], ["M24", "3", "36", "39.55", "19"]]}, "calidades": {"titulo": "Clases de resistencia", "cols": ["Clase", "Diámetro", "Material", "Dureza Rockwell", "Resistencia (psi)"], "rows": [["5", "M3 – M16", "Acero al bajo carbono", "B 74 – C 32", "75 400"], ["5", "M18 – M24", "Acero al bajo carbono", "B 80 – C 32", "91 300"], ["8", "M3 – M16", "Acero al mediano carbono", "B 94 – C 32", "116 000"], ["8", "M18 – M24", "Acero al mediano carbono", "C 22 – C 36", "133 000"], ["10", "M3 – M24", "Mediano carbono templado y revenido", "C 28 – C 36", "150 000"]]}, "grado_chips": ["Clase 5", "Clase 8", "Clase 10"], "nota_medidas": null}, {"id": "tuerca-inoxidable", "fam": "tuercas", "nombre": "Tuerca hexagonal inoxidable", "resumen": "Tuerca en acero inoxidable austenítico para uniones expuestas a humedad y agentes químicos.", "specs": [["Calidades", "SS-304 y SS-316"], ["Diámetros", "1/4″ hasta 1″"], ["Rosca", "UNC"]], "foto": "tuerca-inoxidable.webp", "plano": "tuerca-inoxidable-plano.webp", "medidas": {"titulo": "Cuadro de medidas", "unidad": "Pulgadas", "cols": ["d (pulg)", "Hilos por pulg.", "c entre caras", "e entre esquinas", "m espesor"], "rows": [["1/4", "20", "0.428", "0.488", "0.212"], ["5/16", "18", "0.489", "0.557", "0.258"], ["3/8", "16", "0.551", "0.628", "0.320"], ["7/16", "14", "0.675", "0.768", "0.365"], ["1/2", "13", "0.736", "0.840", "0.427"], ["9/16", "12", "0.861", "0.982", "0.473"], ["5/8", "11", "0.922", "1.051", "0.535"], ["3/4", "10", "1.088", "1.240", "0.617"], ["7/8", "9", "1.269", "1.447", "0.724"], ["1", "8", "1.450", "1.653", "0.831"]]}, "calidades": {"titulo": "Clases de acero", "cols": ["Clase", "Composición química %", "Carga de prueba (psi)"], "rows": [["SS-304", "C ≤ 0.08 · Cr 18–20 · Ni 8–10.5", "90 000"], ["SS-316", "C ≤ 0.08 · Cr 16–18 · Ni 10–14 · Mo 2–3", "90 000"]]}, "grado_chips": ["SS-304", "SS-316"], "nota_medidas": null}, {"id": "tuerca-nylon", "fam": "tuercas", "nombre": "Tuerca de seguridad con nylon", "resumen": "El anillo de nylon frena la rosca y evita que la tuerca se afloje por vibración.", "specs": [["Norma", "ASME B18.2.2 / SAE J995"], ["Grado", "2"], ["Diámetros", "1/4″ hasta 1″"], ["Rosca", "UNC"], ["Acabado", "Zincado"]], "foto": "tuerca-nylon.webp", "plano": "tuerca-nylon-plano.webp", "medidas": {"titulo": "Cuadro de medidas", "unidad": "Pulgadas", "cols": ["Ø nominal", "Hilos por pulg.", "c entre caras (mín.)", "e entre esquinas (mín.)", "m altura (mín.)"], "rows": [["1/4", "20", "0.428", "0.488", "0.298"], ["5/16", "18", "0.489", "0.557", "0.329"], ["3/8", "16", "0.551", "0.628", "0.438"], ["1/2", "13", "0.736", "0.84", "0.579"], ["5/8", "11", "0.922", "1.051", "0.735"], ["3/4", "10", "1.088", "1.24", "0.86"], ["1", "8", "1.450", "1.653", "1.016"]]}, "calidades": {"titulo": "Grado de resistencia", "cols": ["Grado", "Material", "Dureza Rockwell", "Diámetro", "Carga de prueba (psi)"], "rows": [["2", "Acero de bajo carbono", "Hasta C 32", "1/4″ – 1″", "90 000"]]}, "grado_chips": ["Grado 2"], "nota_medidas": null}, {"id": "arandela-plana", "fam": "arandelas", "nombre": "Arandela plana", "resumen": "Reparte la carga del perno o la tuerca y protege la superficie de apoyo.", "specs": [["Diámetros", "1/4″ hasta 1 1/2″"]], "foto": "arandela-plana.webp", "plano": "arandela-plana-plano.webp", "medidas": {"titulo": "Cuadro de medidas", "unidad": "Pulgadas", "cols": ["Ø nominal", "d2 Ø exterior", "d1 Ø interior", "S espesor mín.", "S espesor máx."], "rows": [["1/4", "0.625", "0.281", "0.051", "0.080"], ["5/16", "0.688", "0.344", "0.051", "0.080"], ["3/8", "0.812", "0.406", "0.051", "0.080"], ["7/16", "0.922", "0.469", "0.051", "0.080"], ["1/2", "1.062", "0.531", "0.074", "0.121"], ["9/16", "1.156", "0.594", "0.074", "0.121"], ["5/8", "1.312", "0.656", "0.074", "0.121"], ["3/4", "1.469", "0.812", "0.108", "0.160"], ["7/8", "1.750", "0.938", "0.108", "0.160"], ["1", "2.000", "1.062", "0.108", "0.160"], ["1 1/8", "2.250", "1.250", "0.108", "0.160"], ["1 1/4", "2.500", "1.375", "0.136", "0.192"], ["1 3/8", "2.750", "1.500", "0.136", "0.192"], ["1 1/2", "3.000", "1.625", "0.136", "0.192"]]}, "calidades": null, "grado_chips": [], "nota_medidas": null}, {"id": "arandela-f436", "fam": "arandelas", "nombre": "Arandela pesada F436", "resumen": "Arandela endurecida para pernos estructurales A325 y A490 y para pernos de anclaje.", "specs": [["Norma", "ASTM F436"], ["Material", "Acero al carbono"], ["Diámetros", "1/4″ hasta 2 1/2″"], ["Acabados", "Negro, galvanizado"]], "foto": "arandela-f436.webp", "plano": "arandela-f436-plano.webp", "medidas": {"titulo": "Cuadro de medidas", "unidad": "Pulgadas", "cols": ["Ø nominal", "d2 Ø exterior", "d1 Ø interior", "S espesor mín.", "S espesor máx."], "rows": [["1/4", "0.625", "0.281", "0.051", "0.080"], ["5/16", "0.688", "0.344", "0.051", "0.080"], ["3/8", "0.813", "0.406", "0.051", "0.080"], ["1/2", "1.063", "0.531", "0.097", "0.177"], ["5/8", "1.313", "0.688", "0.122", "0.177"], ["3/4", "1.468", "0.813", "0.122", "0.177"], ["7/8", "1.750", "0.938", "0.136", "0.177"], ["1", "2.000", "1.125", "0.136", "0.177"], ["1 1/8", "2.250", "1.250", "0.136", "0.177"], ["1 1/4", "2.500", "1.375", "0.136", "0.177"], ["1 3/8", "2.750", "1.500", "0.136", "0.177"], ["1 1/2", "3.000", "1.625", "0.136", "0.177"], ["1 3/4", "3.375", "1.875", "0.178", "0.280"], ["2", "3.750", "2.125", "0.178", "0.280"], ["2 1/4", "4.000", "2.375", "0.240", "0.340"], ["2 1/2", "4.500", "2.625", "0.240", "0.340"]]}, "calidades": {"titulo": "Dureza por acabado", "cols": ["Acabado", "Material", "Dureza Rockwell"], "rows": [["Negro", "Acero al carbono", "C 38 – C 45"], ["Galvanizado", "Acero al carbono", "C 26 – C 45"]]}, "grado_chips": ["F436"], "nota_medidas": null}, {"id": "arandela-inoxidable", "fam": "arandelas", "nombre": "Arandela plana inoxidable", "resumen": "Arandela plana en acero inoxidable 304 o 316 para uniones expuestas a la corrosión.", "specs": [["Calidades", "SS-304 y SS-316"], ["Diámetros", "1/4″ hasta 1″"]], "foto": "arandela-inoxidable.webp", "plano": "arandela-inoxidable-plano.webp", "medidas": {"titulo": "Cuadro de medidas", "unidad": "Pulgadas", "cols": ["Ø nominal", "d1 Ø interior", "d2 Ø exterior", "S espesor mín.", "S espesor máx."], "rows": [["1/4", "0.281", "0.625", "0.051", "0.080"], ["5/16", "0.344", "0.688", "0.051", "0.080"], ["3/8", "0.406", "0.812", "0.051", "0.080"], ["7/16", "0.469", "0.922", "0.051", "0.080"], ["1/2", "0.531", "1.062", "0.074", "0.121"], ["9/16", "0.594", "1.156", "0.074", "0.121"], ["5/8", "0.656", "1.312", "0.074", "0.121"], ["3/4", "0.812", "1.469", "0.108", "0.160"], ["7/8", "0.938", "1.750", "0.108", "0.160"], ["1", "1.062", "2.000", "0.108", "0.160"]]}, "calidades": {"titulo": "Clases de acero", "cols": ["Clase", "Material", "Composición química %"], "rows": [["SS-304", "Acero inoxidable austenítico", "C ≤ 0.08 · Cr 18–20 · Ni 8–10.5"], ["SS-316", "Acero inoxidable austenítico", "C ≤ 0.08 · Cr 16–18 · Ni 10–14 · Mo 2–3"]]}, "grado_chips": ["SS-304", "SS-316"], "nota_medidas": null}, {"id": "arandela-presion", "fam": "arandelas", "nombre": "Arandela de presión", "resumen": "Arandela partida que actúa como resorte y mantiene la tensión de la unión frente a vibraciones.", "specs": [["Calidades", "SS-304 y SS-316"], ["Diámetros", "1/4″ hasta 1″"]], "foto": "arandela-presion.webp", "plano": "arandela-presion-plano.webp", "medidas": {"titulo": "Cuadro de medidas", "unidad": "Pulgadas", "cols": ["Ø nominal", "d Ø interior", "d Ø exterior", "t espesor", "h ancho"], "rows": [["1/4", "0.252", "0.487", "0.062", "0.109"], ["5/16", "0.314", "0.583", "0.078", "0.125"], ["3/8", "0.377", "0.680", "0.094", "0.141"], ["7/16", "0.440", "0.776", "0.109", "0.156"], ["1/2", "0.502", "0.869", "0.125", "0.171"], ["9/16", "0.564", "0.965", "0.141", "0.188"], ["5/8", "0.628", "1.073", "0.156", "0.203"], ["3/4", "0.753", "1.265", "0.188", "0.234"], ["7/8", "0.878", "1.459", "0.219", "0.266"], ["1", "1.003", "1.656", "0.250", "0.297"]]}, "calidades": {"titulo": "Clases de acero", "cols": ["Clase", "Composición química %", "Dureza Rockwell"], "rows": [["SS-304", "C ≤ 0.08 · Cr 18–20 · Ni 8–10.5", "C 35 – C 43"], ["SS-316", "C ≤ 0.08 · Cr 16–18 · Ni 10–14 · Mo 2–3", "C 35 – C 43"]]}, "grado_chips": ["SS-304", "SS-316"], "nota_medidas": null}, {"id": "varilla-b7", "fam": "varillas", "nombre": "Varilla roscada B7", "resumen": "Varilla de acero aleado al cromo-molibdeno para espárragos de alta presión, bridas y anclajes de alta resistencia.", "specs": [["Norma", "ASTM A193 grado B7"], ["Material", "Acero aleado (C, Cr y Mo)"], ["Diámetros", "1/2″ hasta 3″"], ["Longitudes", "A solicitud del cliente"], ["Acabado", "Pavonado"]], "foto": "varilla-b7.webp", "plano": "varilla-b7-plano.webp", "medidas": null, "nota_medidas": "Las varillas se cortan al largo que pidas. Indícanos diámetro, largo y cantidad para cotizar.", "calidades": {"titulo": "Propiedades mecánicas", "cols": ["Grado", "Material", "Dureza Rockwell máx.", "Tracción mín."], "rows": [["B7", "Acero aleado (C, Cr y Mo)", "C 35", "125 000 psi (hasta 2 1/2″)"], ["B7", "Acero aleado (C, Cr y Mo)", "C 35", "115 000 psi (2 1/2″ a 4″)"]]}, "grado_chips": ["B7"]}, {"id": "varilla-zincada", "fam": "varillas", "nombre": "Varilla roscada comercial", "resumen": "Varilla de uso general para colgar bandejas portacables, ductos y soportería, y para espárragos comunes.", "specs": [["Norma", "ASTM A36 / ASME B1.1"], ["Material", "Acero al bajo carbono"], ["Diámetros", "1/4″ hasta 1 1/2″"], ["Longitudes", "A solicitud del cliente"], ["Acabados", "Galvanizado, zincado"]], "foto": "varilla-zincada.webp", "plano": "varilla-zincada-plano.webp", "medidas": null, "nota_medidas": "Las varillas se cortan al largo que pidas. Indícanos diámetro, largo y cantidad para cotizar.", "calidades": {"titulo": "Propiedades mecánicas", "cols": ["Grado", "Material", "Dureza Rockwell máx.", "Tracción"], "rows": [["A36", "Acero al bajo carbono", "B 100", "58 000 psi"]]}, "grado_chips": ["A36"]}, {"id": "varilla-inoxidable", "fam": "varillas", "nombre": "Varilla roscada inoxidable", "resumen": "Varilla en acero inoxidable austenítico para plantas de proceso, ambientes marinos y mineros.", "specs": [["Norma", "ASTM A193 / ASME B1.1"], ["Grados", "B8 (AISI 304), B8M (AISI 316)"], ["Material", "Acero inoxidable austenítico"], ["Diámetros", "1/4″ hasta 1 1/2″"], ["Longitudes", "A solicitud del cliente"]], "foto": "varilla-inoxidable.webp", "plano": "varilla-inoxidable-plano.webp", "medidas": null, "nota_medidas": "Las varillas se cortan al largo que pidas. Indícanos diámetro, largo y cantidad para cotizar.", "calidades": {"titulo": "Propiedades mecánicas", "cols": ["Grado", "Dureza Rockwell máx.", "Tracción"], "rows": [["B8 / B8M", "B 96 (clase 1) · C 35 (clase 2)", "75 000 a 125 000 psi"]]}, "grado_chips": ["B8", "B8M"]}];
+const FAM=[['anclajes','Anclajes','Rectos, de expansión y tacos para fijar estructuras al concreto.','anclaje-recto.webp'],['pernos','Pernos','Hexagonales, estructurales, métricos, inoxidables, allen y coche.','perno-estructural.webp'],['tuercas','Tuercas','Hexagonales, pesadas 2H, métricas, inoxidables y de seguridad.','tuerca-2h.webp'],['arandelas','Arandelas','Planas, F436 endurecidas, inoxidables y de presión.','arandela-f436.webp'],['varillas','Varillas','Roscadas B7, comerciales e inoxidables al largo que pidas.','varilla-b7.webp']];
+const famName=Object.fromEntries(FAM.map(f=>[f[0],f[1]]));
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const waURL=t=>'https://wa.me/'+WA+'?text='+encodeURIComponent(t);
+document.querySelectorAll('[data-wa]').forEach(a=>{a.href=waURL(a.dataset.wa);a.target='_blank';a.rel='noopener'});
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const FLECHA='<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>';
+
+/* marquesina */
+const NORMAS=['ASTM A325','ASTM F1554','ASTM A193 B7','ASTM A490','SAE J429','ASTM F436','ASME B18.2.2','ASTM A194 2H','AISI 304','AISI 316','ISO clase 8.8','ASTM A36'];
+const HEXI='<svg viewBox="0 0 20 20" aria-hidden="true"><polygon points="10,1 18,5.5 18,14.5 10,19 2,14.5 2,5.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>';
+document.getElementById('pista').innerHTML=[...NORMAS,...NORMAS].map(n=>`<span>${n}${HEXI}</span>`).join('');
+
+/* líneas */
+document.getElementById('lineas-grid').innerHTML=FAM.map(([k,n,d,img],i)=>`<button class="linea rv" style="--i:${i}" data-f="${k}"><span class="brillo"></span><span class="cuenta">${P.filter(p=>p.fam===k).length} productos</span><span class="foco"><img src="img/${img}" alt="" loading="lazy"></span><h3>${n}</h3><p>${d}</p><span class="ir">Ver fichas ${FLECHA}</span></button>`).join('');
+document.querySelectorAll('.linea').forEach(b=>{
+  b.onclick=()=>{const first=P.find(p=>p.fam===b.dataset.f);go(first.id);document.getElementById('catalogo').scrollIntoView({behavior:RM?'auto':'smooth'})};
+  if(!RM) b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;b.style.setProperty('--mx',x*100+'%');b.style.setProperty('--my',y*100+'%');b.style.transform=`rotateY(${(x-.5)*10}deg) rotateX(${(.5-y)*10}deg) translateZ(0)`});
+  b.addEventListener('pointerleave',()=>{b.style.transform=''});
+});
+
+/* catálogo */
+let fam='anclajes',cur=null,vista='foto',medidaSel=null;
+function renderFam(){
+  const el=document.getElementById('familias');
+  el.innerHTML='<span class="pill"></span>'+FAM.map(([k,n])=>`<button role="tab" aria-selected="${k===fam}" data-f="${k}">${n}<small>${P.filter(p=>p.fam===k).length}</small></button>`).join('');
+  el.querySelectorAll('button').forEach(b=>b.onclick=()=>{const first=P.find(p=>p.fam===b.dataset.f);go(first.id)});
+  requestAnimationFrame(movePill);
+}
+let lastPill=null;
+function movePill(){const el=document.getElementById('familias'),pill=el.querySelector('.pill'),b=el.querySelector('[aria-selected="true"]');if(!b)return;
+  if(lastPill){pill.style.transition='none';pill.style.left=lastPill.l+'px';pill.style.width=lastPill.w+'px';pill.offsetWidth;pill.style.transition=''}
+  pill.style.left=b.offsetLeft+'px';pill.style.width=b.offsetWidth+'px';lastPill={l:b.offsetLeft,w:b.offsetWidth}}
+addEventListener('resize',()=>{lastPill=null;movePill()});
+function renderLista(){
+  const el=document.getElementById('lista');
+  el.innerHTML=P.filter(p=>p.fam===fam).map(p=>`<button data-id="${p.id}" aria-current="${p.id===cur.id}"><span class="th"><img src="img/${p.foto||p.plano}" alt="" loading="lazy"></span><span>${esc(p.nombre)}<small>${esc((p.grado_chips||[]).join(', ')||famName[p.fam])}</small></span></button>`).join('');
+  el.querySelectorAll('button').forEach(b=>b.onclick=()=>go(b.dataset.id,true));
+}
+function tabla(t,cls){
+  return `<div class="tabla-scroll"><table class="${cls}"><thead><tr>${t.cols.map((c,i)=>`<th scope="col" data-c="${i}">${esc(c)}</th>`).join('')}</tr></thead><tbody>${t.rows.map((r,ri)=>`<tr data-r="${ri}">${r.map((v,i)=>i===0?`<th scope="row" data-c="0">${esc(v)}</th>`:`<td data-c="${i}">${esc(v)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+}
+function renderFicha(anim){
+  const p=cur,el=document.getElementById('ficha');
+  if(!p.foto)vista='plano';else if(!p.plano)vista='foto';
+  const img=vista==='foto'?p.foto:p.plano,m=p.medidas;
+  el.innerHTML=`
+  <div class="ficha-top">
+    <div class="imgbox anim">
+      <div class="stage"><img id="f-img" class="${vista==='plano'?'plano':''}" src="img/${img}" alt="${esc(p.nombre)}, ${vista==='foto'?'fotografía':'plano con cotas'}"></div>
+      ${vista==='foto'?'<span class="sombra"></span>':''}
+      <div class="vista" role="group" aria-label="Vista">
+        <button aria-pressed="${vista==='foto'}" data-v="foto" ${p.foto?'':'disabled'}>Foto</button>
+        <button aria-pressed="${vista==='plano'}" data-v="plano" ${p.plano?'':'disabled'}>Plano con cotas</button>
+      </div>
+    </div>
+    <div class="ficha-info anim">
+      <div class="fam">${famName[p.fam]}</div>
+      <h3>${esc(p.nombre)}</h3>
+      <p class="res">${esc(p.resumen)}</p>
+      ${p.grado_chips&&p.grado_chips.length?`<div class="chips">${p.grado_chips.map(c=>`<span>${esc(c)}</span>`).join('')}</div>`:''}
+      <dl class="specs">${p.specs.map(([k,v])=>`<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>
+    </div>
+  </div>
+  <div class="bloque">
+    <div class="bloque-head">
+      <h4 class="h3" style="margin:0">${m?esc(m.titulo):'Medidas'}${m?`<small>${esc(m.unidad)}</small>`:''}</h4>
+      ${m?`<label class="medida-sel">Tu medida <select id="sel-medida"><option value="">Elegir</option>${m.rows.map((r,i)=>`<option value="${i}" ${medidaSel===i?'selected':''}>${esc(r[0])}</option>`).join('')}</select></label>`:''}
+    </div>
+    ${m?tabla(m,'t-medidas'):`<p class="nota">${esc(p.nota_medidas||'Medidas a solicitud del cliente.')}</p>`}
+  </div>
+  ${p.calidades?`<div class="bloque"><div class="bloque-head"><h4 class="h3" style="margin:0">${esc(p.calidades.titulo)}</h4></div>${tabla(p.calidades,'t-calidad')}</div>`:''}
+  <div class="cotizar"><p id="cot-txt"></p><a class="btn btn-azul" id="cot-btn" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.05c-.24.68-1.42 1.3-1.950 1.35-.5.05-1.13.07-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.8-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.27-.29.58-.36.78-.36h.56c.18 0 .42-.07.66.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.19-.14.31-.29.48-.14.17-.3.38-.43.5-.14.14-.29.3-.12.58.17.29.75 1.24 1.61 2 1.11.99 2.04 1.3 2.33 1.44.29.14.46.12.63-.07.17-.19.72-.84.91-1.130.19-.29.39-.24.65-.14.27.1 1.68.79 1.97.94.29.14.48.22.55.34.07.12.07.7-.17 1.38z"/></svg>
+ <span id="cot-lbl"></span></a></div>`;
+  if(anim){el.classList.remove('cambia');void el.offsetWidth;el.classList.add('cambia')}
+  el.querySelectorAll('.vista button').forEach(b=>b.onclick=()=>{if(b.disabled||b.dataset.v===vista)return;vista=b.dataset.v;const im=document.getElementById('f-img');im.classList.add('cargando');setTimeout(()=>{im.src='img/'+(vista==='foto'?p.foto:p.plano);im.alt=p.nombre+(vista==='foto'?', fotografía':', plano con cotas');im.classList.toggle('plano',vista==='plano');const s=el.querySelector('.sombra');if(s)s.style.display=vista==='foto'?'':'none';im.onload=()=>im.classList.remove('cargando')},200);el.querySelectorAll('.vista button').forEach(x=>x.setAttribute('aria-pressed',x.dataset.v===vista))});
+  const t=el.querySelector('.t-medidas');
+  if(t){
+    t.addEventListener('mouseover',e=>{const c=e.target.closest('[data-c]');if(!c)return;const ci=c.dataset.c,tr=c.closest('tr');t.querySelectorAll('.cx').forEach(x=>x.classList.remove('cx'));if(ci!=='0')t.querySelectorAll(`[data-c="${ci}"]`).forEach(x=>x.classList.add('cx'));if(tr&&tr.dataset.r!==undefined)tr.classList.add('cx')});
+    t.addEventListener('mouseleave',()=>t.querySelectorAll('.cx').forEach(x=>x.classList.remove('cx')));
+    t.addEventListener('click',e=>{const tr=e.target.closest('tbody tr');if(!tr)return;const i=+tr.dataset.r;setMedida(medidaSel===i?null:i)});
+    document.getElementById('sel-medida').onchange=e=>setMedida(e.target.value===''?null:+e.target.value);
+  }
+  setMedida(medidaSel,true);
+}
+function setMedida(i,silent){
+  medidaSel=i;const p=cur,m=p.medidas;
+  const t=document.querySelector('.t-medidas');
+  if(t){t.querySelectorAll('tbody tr').forEach(tr=>tr.classList.toggle('sel',+tr.dataset.r===i));const s=document.getElementById('sel-medida');if(s)s.value=i===null?'':i}
+  const raw=(m&&i!==null)?m.rows[i][0]:null;
+  const med=raw?(m.unidad==='Pulgadas'?raw+'″':raw):null;
+  document.getElementById('cot-lbl').textContent=med?`Cotizar ${med} por WhatsApp`:'Cotizar por WhatsApp';
+  document.getElementById('cot-txt').innerHTML=med?`Medida marcada: <b>${esc(p.nombre.toLowerCase())} ${esc(med)}</b>. Agrega largo y cantidad en el chat.`:(m?'Marca una fila del cuadro para incluir la medida en tu mensaje.':'Envíanos diámetro, largo y cantidad, o tu plano.');
+  document.getElementById('cot-btn').href=waURL(`Hola, quisiera cotizar: ${p.nombre}${med?' '+med:''}.`);
+  const fp=document.getElementById('f-producto');if(fp&&!silent){fp.value=p.id;document.getElementById('f-medida').value=med||'';updForm()}
+}
+function go(id,scroll){
+  const p=P.find(x=>x.id===id)||P[0];
+  const changed=!cur||cur.id!==p.id;
+  cur=p;fam=p.fam;if(changed){medidaSel=null;vista=p.foto?'foto':'plano'}
+  renderFam();renderLista();renderFicha(changed);
+  if(changed&&location.hash.slice(1)!==p.id&&document.readyState==='complete')history.replaceState(null,'','#'+p.id);
+  const fp=document.getElementById('f-producto');if(fp){fp.value=p.id;updForm()}
+  if(scroll&&innerWidth<1060)document.getElementById('ficha').scrollIntoView({block:'start',behavior:RM?'auto':'smooth'});
+}
+addEventListener('hashchange',()=>{const p=P.find(x=>x.id===location.hash.slice(1));if(p){go(p.id);document.getElementById('catalogo').scrollIntoView()}});
+
+/* marcas de cabeza */
+function hex(inner,{nut=false}={}){
+  const pts=[...Array(6)].map((_,i)=>{const a=Math.PI/3*i;return [60+52*Math.cos(a),60+52*Math.sin(a)].map(v=>v.toFixed(1)).join(',')}).join(' ');
+  return `<svg viewBox="0 0 120 120" aria-hidden="true"><polygon points="${pts}" fill="rgba(43,134,230,.12)" stroke="none"/><polygon class="trazo" style="--len:320" points="${pts}" fill="none" stroke="#86C8FF" stroke-width="2.2" stroke-linejoin="round"/><circle class="trazo" style="--len:270" cx="60" cy="60" r="${nut?24:43}" fill="none" stroke="#86C8FF" stroke-width="1.2" opacity=".55"/>${nut?'<circle class="trazo" style="--len:110" cx="60" cy="60" r="17" fill="none" stroke="#86C8FF" stroke-width="1.8"/>':''}<g class="marca-i">${inner}</g></svg>`;
+}
+const rad=n=>[...Array(n)].map((_,i)=>{const a=(-90+360/n*i)*Math.PI/180;return `<line x1="${60+9*Math.cos(a)}" y1="${60+9*Math.sin(a)}" x2="${60+34*Math.cos(a)}" y2="${60+34*Math.sin(a)}" stroke="#fff" stroke-width="4.5" stroke-linecap="round"/>`}).join('');
+const txt=(t,s=22)=>`<text x="60" y="${60+s*.36}" text-anchor="middle" fill="#fff" font-family="Archivo,sans-serif" font-weight="800" font-size="${s}">${t}</text>`;
+const M=[
+ ['Grado 2','Cabeza lisa, sin líneas. Uso general y montajes livianos.','Tracción mín. 74 000 psi (hasta 3/4″)',hex('')],
+ ['Grado 5','Tres líneas radiales. Maquinaria y montajes con carga media.','Tracción mín. 120 000 psi (hasta 1″)',hex(rad(3))],
+ ['Grado 8','Seis líneas radiales. Alta resistencia, tratado térmicamente.','Tracción mín. 150 000 psi',hex(rad(6))],
+ ['ASTM A325','Perno estructural pesado para conexiones de acero.','Tracción mín. 105 000 psi',hex(txt('A325',24))],
+ ['ASTM A490','Perno estructural de mayor resistencia que el A325.','Tracción mín. 150 000 psi',hex(txt('A490',24))],
+ ['Clase 8.8','Métrico, carbono tratado térmicamente.','Tracción mín. 116 000 psi (hasta M16)',hex(txt('8.8',30))],
+ ['Clase 10.9','Métrico, acero aleado tratado térmicamente.','Tracción mín. 150 800 psi',hex(txt('10.9',28))],
+ ['Tuerca 2H','Tuerca pesada para anclajes y espárragos B7.','Carga de prueba 175 000 psi',hex(`<text x="60" y="100" text-anchor="middle" fill="#fff" font-family="Archivo,sans-serif" font-weight="800" font-size="17">2H</text>`,{nut:true})],
+];
+document.getElementById('marcas').innerHTML=M.map(([t,d,v,s],i)=>`<div class="marca rv" style="--i:${i%4}">${s}<h3>${t}</h3><p>${d}</p><span class="dato-m">${v}</span></div>`).join('');
+const F=[['var(--f36)','Grado 36','Fluencia mín. 36 ksi (248 MPa)'],['var(--f55)','Grado 55','Fluencia mín. 55 ksi (380 MPa)'],['var(--f105)','Grado 105','Fluencia mín. 105 ksi (724 MPa)']];
+document.getElementById('f1554').innerHTML=F.map(([c,t,d],i)=>{
+  let th='';for(let x=300;x<492;x+=7)th+=`<line x1="${x}" y1="7" x2="${x+4}" y2="33" stroke="#9DB5D6" stroke-width="1.6"/>`;
+  return `<div class="vf"><svg viewBox="0 0 520 40" preserveAspectRatio="none" aria-hidden="true"><g class="barra" style="--i:${i}"><defs><linearGradient id="vb${i}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5B7EAE"/><stop offset=".5" stop-color="#B9CBE3"/><stop offset="1" stop-color="#3B5C8C"/></linearGradient></defs><rect x="0" y="11" width="494" height="18" fill="url(#vb${i})"/><rect x="298" y="7" width="196" height="26" fill="url(#vb${i})"/>${th}<rect x="372" y="0" width="16" height="40" fill="#6F8DB8"/><rect x="392" y="2" width="32" height="36" fill="#6F8DB8"/><rect x="490" y="7" width="30" height="26" fill="${c}"/><rect x="490" y="7" width="30" height="26" fill="${c}" opacity=".6" style="filter:blur(6px)"/></g></svg><div><b>${t}</b><span>${d}</span></div></div>`}).join('');
+
+/* formulario */
+const fp=document.getElementById('f-producto');
+fp.innerHTML=FAM.map(([k,n])=>`<optgroup label="${n}">${P.filter(p=>p.fam===k).map(p=>`<option value="${p.id}">${esc(p.nombre)}</option>`).join('')}</optgroup>`).join('')+'<option value="otro">Fabricación según plano u otro</option>';
+const form=document.getElementById('form-cot');
+function updForm(){
+  const f=new FormData(form);const pr=f.get('producto')==='otro'?'Fabricación según plano':(P.find(p=>p.id===f.get('producto'))||{}).nombre;
+  const l=['Hola, quisiera una cotización.'];
+  if(f.get('nombre'))l.push('Nombre: '+f.get('nombre'));
+  if(f.get('empresa'))l.push('Empresa: '+f.get('empresa'));
+  if(pr)l.push('Producto: '+pr);
+  if(f.get('medida'))l.push('Medida: '+f.get('medida'));
+  if(f.get('cantidad'))l.push('Cantidad: '+f.get('cantidad'));
+  if(f.get('detalle'))l.push('Detalle: '+f.get('detalle'));
+  const a=document.getElementById('f-enviar');a.href=waURL(l.join('\n'));a.target='_blank';a.rel='noopener';
+}
+form.addEventListener('input',updForm);form.addEventListener('submit',e=>e.preventDefault());
+
+const start=P.find(p=>p.id===location.hash.slice(1));
+go(start?start.id:'anclaje-recto');
+if(start)requestAnimationFrame(()=>document.getElementById('catalogo').scrollIntoView());
+
+/* revelado y efectos de scroll */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('ok');io.unobserve(e.target)}}),{threshold:.14,rootMargin:'0px 0px -6% 0px'});
+document.querySelectorAll('.rv,.marca,.f1554').forEach(el=>io.observe(el));
+if(RM||!('IntersectionObserver' in window))document.querySelectorAll('.rv,.marca,.f1554').forEach(el=>el.classList.add('ok'));
+const site=document.getElementById('site'),prog=document.getElementById('progreso'),banda=document.getElementById('banda-img'),pasos=document.getElementById('pasos'),pLis=[...pasos.children];
+let tick=false;
+function onScroll(){
+  tick=false;const y=scrollY,h=document.documentElement.scrollHeight-innerHeight;
+  prog.style.transform=`scaleX(${h>0?y/h:0})`;
+  site.classList.toggle('solido',y>40);
+  if(!RM){const r=banda.parentElement.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight){const k=(r.top+r.height/2-innerHeight/2)/innerHeight;banda.style.transform=`translateY(${k*-60}px) scale(1.04)`}}
+  const pr=pasos.getBoundingClientRect();const k=Math.min(1,Math.max(0,(innerHeight*.75-pr.top)/(pr.width*.9)));
+  pasos.style.setProperty('--p',k.toFixed(3));pLis.forEach((li,i)=>li.classList.toggle('on',k>=i/(pLis.length-1)-.02));
+  window.__heroK=Math.min(1,y/innerHeight);
+}
+addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});onScroll();
+/* contadores */
+document.querySelectorAll('[data-cuenta]').forEach(el=>{if(RM)return;const n=+el.dataset.cuenta,t0=performance.now()+500;const f=t=>{const k=Math.min(1,Math.max(0,(t-t0)/1400));el.textContent=Math.round(n*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)};el.textContent='0';requestAnimationFrame(f)});
+</script>
+
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<script type="module">
+const box=document.getElementById('hero3d');
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const fail=()=>box.classList.add('sin3d');
+const timer=setTimeout(()=>{if(!box.querySelector('canvas'))fail()},6000);
+try{
+  const THREE=await import('three');
+  const {RoomEnvironment}=await import('three/addons/environments/RoomEnvironment.js');
+  const renderer=new THREE.WebGLRenderer({antialias:true,alpha:true,powerPreference:'high-performance'});
+  renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+  renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.18;
+  renderer.outputColorSpace=THREE.SRGBColorSpace;
+  box.prepend(renderer.domElement);clearTimeout(timer);
+  const scene=new THREE.Scene();
+  const pm=new THREE.PMREMGenerator(renderer);
+  scene.environment=pm.fromScene(new RoomEnvironment(),0.04).texture;
+  const cam=new THREE.PerspectiveCamera(30,1,.1,100);cam.position.set(0,0,15);
+  const key=new THREE.DirectionalLight(0xffffff,2.2);key.position.set(5,6,8);scene.add(key);
+  const rim=new THREE.DirectionalLight(0x4aa3ff,5);rim.position.set(-6,2,-6);scene.add(rim);
+  const rim2=new THREE.PointLight(0x86c8ff,40,30);rim2.position.set(4,-4,3);scene.add(rim2);
+  const fill=new THREE.DirectionalLight(0xe2ecff,1.6);fill.position.set(-5,4,7);scene.add(fill);
+
+  const zinc=new THREE.MeshStandardMaterial({color:0xc8d2dc,metalness:1,roughness:.3});
+  const zincOsc=new THREE.MeshStandardMaterial({color:0xa9b6c4,metalness:1,roughness:.38});
+  const bolt=new THREE.Group();
+  const L=5.4,R=.52,pitch=.2,threadLen=3.4;
+  // cabeza hexagonal con chaflán
+  const headShape=new THREE.Shape();for(let i=0;i<6;i++){const a=Math.PI/3*i+Math.PI/6;const x=1.05*Math.cos(a),y=1.05*Math.sin(a);i?headShape.lineTo(x,y):headShape.moveTo(x,y)}headShape.closePath();
+  const head=new THREE.Mesh(new THREE.ExtrudeGeometry(headShape,{depth:.62,bevelEnabled:true,bevelThickness:.08,bevelSize:.06,bevelSegments:3}),zinc);
+  head.rotation.x=-Math.PI/2;head.position.y=L/2;bolt.add(head);
+  const cara=new THREE.Mesh(new THREE.CylinderGeometry(.98,.98,.06,64),zincOsc);cara.position.y=L/2-.03;bolt.add(cara);
+  // vástago
+  const shank=new THREE.Mesh(new THREE.CylinderGeometry(R,R,L,64),zinc);bolt.add(shank);
+  // rosca helicoidal
+  class Helix extends THREE.Curve{getPoint(t,o=new THREE.Vector3()){const turns=threadLen/pitch,a=t*turns*Math.PI*2;return o.set(Math.cos(a)*R,-L/2+.12+t*(threadLen-.12),Math.sin(a)*R)}}
+  const thread=new THREE.Mesh(new THREE.TubeGeometry(new Helix(),Math.round(threadLen/pitch*48),.075,8,false),zinc);bolt.add(thread);
+  const punta=new THREE.Mesh(new THREE.CylinderGeometry(R*.82,R*.82,.12,48),zinc);punta.position.y=-L/2+.06;bolt.add(punta);
+  // tuerca
+  const nutShape=new THREE.Shape();for(let i=0;i<6;i++){const a=Math.PI/3*i+Math.PI/6;const x=1.02*Math.cos(a),y=1.02*Math.sin(a);i?nutShape.lineTo(x,y):nutShape.moveTo(x,y)}nutShape.closePath();
+  const hole=new THREE.Path();hole.absarc(0,0,R+.03,0,Math.PI*2,true);nutShape.holes.push(hole);
+  const nutGeo=new THREE.ExtrudeGeometry(nutShape,{depth:.8,bevelEnabled:true,bevelThickness:.07,bevelSize:.05,bevelSegments:3,curveSegments:48});nutGeo.center();
+  const nut=new THREE.Mesh(nutGeo,zinc);nut.rotation.x=-Math.PI/2;
+  const nutG=new THREE.Group();nutG.add(nut);bolt.add(nutG);
+  // arandela
+  const ws=new THREE.Shape();ws.absarc(0,0,1.22,0,Math.PI*2,false);const wh=new THREE.Path();wh.absarc(0,0,R+.05,0,Math.PI*2,true);ws.holes.push(wh);
+  const wg=new THREE.ExtrudeGeometry(ws,{depth:.12,bevelEnabled:true,bevelThickness:.02,bevelSize:.02,bevelSegments:2,curveSegments:64});wg.center();
+  const washer=new THREE.Mesh(wg,zincOsc);washer.rotation.x=-Math.PI/2;const wG=new THREE.Group();wG.add(washer);bolt.add(wG);
+
+  const pivot=new THREE.Group();pivot.add(bolt);scene.add(pivot);
+  pivot.rotation.z=-.62;pivot.rotation.x=.28;
+  // sombra suave
+  const sh=new THREE.Mesh(new THREE.CircleGeometry(3.2,48),new THREE.MeshBasicMaterial({color:0x000814,transparent:true,opacity:.35}));
+  sh.rotation.x=-Math.PI/2;sh.position.y=-3.6;sh.scale.set(1,.35,1);scene.add(sh);
+
+  function size(){const w=box.clientWidth,h=box.clientHeight;renderer.setSize(w,h,false);cam.aspect=w/h;cam.position.z=w<600?16:14;cam.updateProjectionMatrix()}
+  size();addEventListener('resize',size);
+  let mx=0,my=0,tx=0,ty=0;
+  addEventListener('pointermove',e=>{tx=(e.clientX/innerWidth-.5);ty=(e.clientY/innerHeight-.5)},{passive:true});
+  let visible=true;new IntersectionObserver(e=>{visible=e[0].isIntersecting}).observe(box);
+  const clock=new THREE.Clock();let intro=0;
+  function frame(){
+    requestAnimationFrame(frame);if(!visible)return;
+    const dt=Math.min(clock.getDelta(),.05),t=clock.elapsedTime;
+    intro=Math.min(1,intro+dt*.55);const ei=1-Math.pow(1-intro,3);
+    mx+=(tx-mx)*.06;my+=(ty-my)*.06;
+    const k=window.__heroK||0;
+    bolt.rotation.y=RM?.6:t*.35+k*2.5;
+    pivot.rotation.z=-.62+mx*.25;pivot.rotation.x=.28+my*.2;
+    pivot.position.y=(RM?0:Math.sin(t*.9)*.12)+(1-ei)*-1.5;
+    pivot.scale.setScalar(.75+ei*.25);
+    // la tuerca baja por la rosca al hacer scroll y gira
+    const yN=-L/2+.55+(threadLen-1.1)*(1-k)*ei+ (1-ei)*-1.2;
+    nutG.position.y=yN;nutG.rotation.y=-(yN/pitch)*Math.PI*2*.05;
+    wG.position.y=yN+.5;
+    renderer.render(scene,cam);
+  }
+  frame();
+}catch(err){console.warn('3D no disponible',err);fail()}
+</script>
+</body>
+</html>
