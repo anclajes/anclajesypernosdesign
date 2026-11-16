@@ -1,45 +1,75 @@
-# DESIGN.md — Anclajes y Pernos SAC (sitio web, versión catálogo industrial)
+# DESIGN.md — Anclajes y Pernos SAC (sitio web, versión 8 "oscura")
 
-Mundo visual: catálogo industrial de fabricante. El producto real, recortado y sin caja, es la imagen principal. Forma propia: esquinas achaflanadas como el canto de una tuerca, en paneles, tarjetas y botones.
+Cliente: Anclajes y Pernos SAC, Comas, Lima. Fabricante e importador de pernería (pernos, tuercas, arandelas, varillas roscadas) y anclajes fabricados a plano, para construcción, minería, energía y telecomunicaciones.
 
-Referencias que lo inspiran (ver Diseños/referencias-web): Bolt Base (azul de marca plano, mosaico de categorías, banda oscura), Würth y United Fasteners (buscador protagonista, franja de confianza), Ganter Norm (piezas recortadas como héroe), TR Fasteners, INA y Metacom (plano junto al cuadro de medidas, caja de cotización), Makers Bolt (forma propia repetida, amarillo de señal).
+Objetivo del sitio: que el cliente de obra encuentre la pieza, confirme la norma y la medida, y cotice por WhatsApp en pocos toques. El cliente suele llegar desde el celular.
 
-## Color
+Mundo visual: una sala oscura y sobria, como la vitrina de una marca de producto premium. Las piezas recortadas y las fotos de obra y taller se muestran como protagonistas sobre el negro. Hay pocos acentos de color: un solo azul de acción.
+
+## Archivos
+- `index.html` es la versión vigente (8), un solo archivo con CSS y JS en línea. Contiene todas las vistas (inicio, catálogo, ficha, fabricación, guía, contacto), que se alternan con `section.vista[data-vista]`.
+- El CSS tiene dos capas: la base heredada de la versión 6 (tokens claros, `.t-*`, `.btn`, `.ch`) y, desde `:root{--negro…}`, la capa de la versión 8, que la sobrescribe con clases `.n-*`. Al editar, se cambia la capa 8 y no se toca la base, salvo para limpiarla.
+- Las versiones anteriores (`version-*.html`) son solo de referencia. El historial real está en git.
+- Imágenes:
+  - `img/recorte`: piezas sin fondo.
+  - `img/*-plano`: planos técnicos.
+  - `img/foto`: fotos de ambiente optimizadas en webp.
+  - `media`: videos 5 (torre) y 6 (certificado) con su póster.
+  - `img/nuevas`: originales pesados. No se publican; están en `.gitignore`.
+
+## Color (capa 8)
 | Token | Valor | Uso |
 |---|---|---|
-| blanco | #FFFFFF | fondo |
-| humo | #EEF0F3 | mesas de producto, tarjetas, paneles |
-| humo-2 | #E2E6EB | hover de tarjetas |
-| linea | #D3D8DF | separadores |
-| gris | #556070 | texto secundario |
-| navy | #0D1B3D | texto, franja superior, bandas oscuras |
-| azul | #0B5BD3 | marca: botones primarios, enlaces, mosaico de Anclajes, llamada final |
-| azul-2 | #0848A8 | hover |
-| señal | #F5B800 | solo acción de cotizar y acentos de rótulo |
+| negro | #0C0D0F | fondo general, encabezado, pie |
+| panel | #151719 | tarjetas y marcos de foto |
+| panel-2 | #1C1F22 | relleno secundario |
+| hilo | rgba(255,255,255,.10) | separadores y bordes |
+| texto-g | #9BA1A9 | texto secundario sobre negro |
+| claro | #F3F3F1 | tarjeta clara ("Por qué trabajar…") |
+| acento | #1F78E0 | única acción: botones, enlaces, foco, llamada final |
+| acento-2 | #1964BE | hover del acento |
+
+Los tokens heredados (navy, azul, señal #F5B800, humo) siguen en uso en las vistas internas que aún no se migraron a la capa 8.
 
 ## Tipografía
-Saira variable (Google Fonts). Títulos con ancho 110–112 y peso 700–720; cuerpo ancho 100, 17px. Números tabulares en todo el sitio.
+Figtree variable (Google Fonts, 300–800).
+- Títulos ligeros y grandes:
+  - `.n-h1`: peso 350, hasta 118px, tracking −0.045em.
+  - `.n-h2`: peso 380, hasta 72px.
+- Cuerpo: 15–17px, con texto secundario en `texto-g`.
+- Números tabulares en todo el sitio.
 
 ## Componentes
-- Chaflán `.ch` (clip-path de 8 puntos, --ch entre 8 y 26px según tamaño).
-- Botones: azul (primario), señal (cotizar), borde navy (secundario), blanco sobre fondos oscuros.
-- Mesa del héroe: piezas recortadas con sombra real, etiqueta técnica al pasar el cursor o enfocar; cada pieza abre su ficha.
-- Mosaico de líneas: celda grande azul para Anclajes, resto en humo, filete superior azul (amarillo en la celda azul).
-- Tarjeta de producto: marco humo achaflanado, recorte centrado, distintivo de stock, línea, nombre, normas.
-- Ficha: galería foto/plano, datos clave con ícono y filete amarillo, caja "Cotiza este producto" (medida, acabado, cantidad a WhatsApp), pestañas, plano fijo junto al cuadro de medidas.
-- Catálogo: filtros por línea, sistema de medida, material, acabado y norma, con conteos.
+- Encabezado negro fijo: logo blanco, Productos (mega menú), Fabricación a plano, Guía técnica y Contacto. A la derecha, Buscar (también con la tecla /) y Cotizar. En móvil queda el logo con los botones Buscar y Menú.
+- Barra inferior fija en móvil con Llamar (tel:+51940479303) y WhatsApp (wa.me con texto prellenado).
+- Botones con radio de 3px: acento (primario), borde blanco translúcido (`.btn-osc`) y blanco (`.btn-bl`). El chaflán `.ch` está desactivado en la capa 8.
+- Tarjetas de línea (`.n-carta`): marco panel de 3:4 con brillo radial, la pieza recortada con sombra, y debajo el nombre y el conteo de productos. Al pasar el cursor hay un borde acento y la pieza gira.
+- Fotos (`.n-foto`) con radio de 4px y revelado tipo cortina azul al entrar en pantalla.
+- Iconos en círculo azul translúcido (`.ic`).
+
+## Secciones del inicio (en orden)
+1. Héroe: titular partido ("Pernería con norma, / lista para despachar."), foto de unión empernada, subtítulo y botones Ver el catálogo y Pedir una cotización.
+2. Lo que hacemos (`.n-trabajo`): foto del taller y beneficios con ícono.
+3. Líneas (`.n-lineas`): "Para cada unión de tu obra", con 5 tarjetas de línea.
+4. Banda con foto (`.n-banda`): "De la cimentación a la cima de la torre" y los sectores.
+5. Razones (`.n-razones`): tarjeta clara con foto del almacén y 3 razones.
+6. Proceso (`.n-proceso`): fabricación paso a paso con fotos.
+7. Explora (`.n-explora`): foto alta y video.
+8. Calidades (`.n-cal`): marcas de grado (F1554 36/55/105, etc.) sobre panel.
+9. Llamada final azul (`.n-llam`) y pie negro.
 
 ## Movimiento
-Una sola secuencia de carga: las piezas de la mesa caen y se asientan. El resto es respuesta del usuario (hover de piezas y tarjetas, cambio foto/plano, transición de vista). Videos con botón de pausa; con movimiento reducido no se reproducen solos.
+- Al cargar: el titular entra desde los lados, la pieza sube y se enciende el brillo.
+- Al bajar: revelado `data-rev` con desplazamiento, y fotos con cortina `data-cortina`.
+- Todo va dentro de `prefers-reduced-motion: no-preference`. Los videos tienen botón de pausa.
 
 ## Procedencia de imágenes
-- Recortes (img/recorte): generados de las fotos de producto del cliente quitando el fondo blanco (relleno desde el borde; contorno convexo en tuercas y arandelas).
-- Fotos, planos y videos: material del cliente en Diseños (ver versión anterior).
+- Recortes, planos y videos: material del cliente.
+- Fotos de `img/foto`: generadas con IA (Gemini) a partir de indicaciones, y optimizadas a webp. **Pendiente: reemplazarlas por fotos reales de la planta y de obras del cliente.** Una empresa que vende con certificado no debe mostrar como propio un taller o una planta que no existen.
 
-## Versión 6 (actual, index.html)
-- La versión 5 quedó guardada como version-5-catalogo.html.
-- Encabezado de una sola fila (72 px): logo, Productos (mega menú con foto por línea y lista de productos), Fabricación a plano, Guía técnica, Contacto; a la derecha Buscar (abre un buscador superpuesto, también con la tecla /) y Cotizar.
-- En inicio el encabezado es transparente sobre el video y usa img/logo-blanco.webp; al bajar o en otras páginas pasa a blanco.
-- Portada a pantalla completa con video 5 (torre en la montaña), titular grande en blanco y barra de las 5 líneas con sus piezas recortadas montada sobre el borde inferior.
-- Secciones separadas por color: blanco (De línea) → azul con retícula (piezas interactivas sobre la mesa) → humo (líneas) → navy con video 6 (certificado) → blanco (fabricación) → humo (marcas) → amarillo señal (cotizar) → pie navy.
-- Páginas internas (catálogo, guía, contacto) con cabecera navy con retícula y una pieza recortada.
+## Pendientes conocidos
+- En móvil, la barra fija Llamar/WhatsApp tapa el final del texto del héroe.
+- Hay mucho espacio vacío antes de "Para cada unión de tu obra".
+- Faltan las etiquetas Open Graph (vista previa al compartir por WhatsApp) y los datos estructurados LocalBusiness.
+- Hay 19 imágenes con `alt=""`. Se debe revisar cuáles son decorativas y cuáles necesitan descripción.
+- Las vistas internas (catálogo, ficha, guía) mezclan las dos capas de estilo.
